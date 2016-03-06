@@ -1,0 +1,2696 @@
+.emoji {
+    height: 2em;
+    width: 2em;
+    margin: 0.1em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.big-emoji {
+    height: 15em;
+    width: 15em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+#classification-data{
+    margin-left: 10%;
+}
+body {
+    padding-top: 65px;
+    /*background-color: #282C34;*/
+}
+.row-centered {
+    text-align: center;
+}
+.col-centered {
+    display: inline-block;
+    float: none;
+    /* reset the text-align */
+    text-align: left;
+    /* inline-block space fix */
+    margin-right: -4px;
+}
+.complete-center {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-top: 30%;
+    margin-bottom: 40%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+.emoji-100 {
+    background-image: url("/static/emojis/100.png");
+}
+.emoji-1234 {
+    background-image: url("/static/emojis/1234.png");
+}
+.emoji--1 {
+    background-image: url("/static/emojis/-1.png");
+}
+.emoji-+1 {
+    background-image: url("/static/emojis/+1.png");
+}
+.emoji-8ball {
+    background-image: url("/static/emojis/8ball.png");
+}
+.emoji-abcd {
+    background-image: url("/static/emojis/abcd.png");
+}
+.emoji-abc {
+    background-image: url("/static/emojis/abc.png");
+}
+.emoji-ab {
+    background-image: url("/static/emojis/ab.png");
+}
+.emoji-accept {
+    background-image: url("/static/emojis/accept.png");
+}
+.emoji-aerial_tramway {
+    background-image: url("/static/emojis/aerial_tramway.png");
+}
+.emoji-airplane {
+    background-image: url("/static/emojis/airplane.png");
+}
+.emoji-alarm_clock {
+    background-image: url("/static/emojis/alarm_clock.png");
+}
+.emoji-alien {
+    background-image: url("/static/emojis/alien.png");
+}
+.emoji-ambulance {
+    background-image: url("/static/emojis/ambulance.png");
+}
+.emoji-anchor {
+    background-image: url("/static/emojis/anchor.png");
+}
+.emoji-angel {
+    background-image: url("/static/emojis/angel.png");
+}
+.emoji-anger {
+    background-image: url("/static/emojis/anger.png");
+}
+.emoji-angry {
+    background-image: url("/static/emojis/angry.png");
+}
+.emoji-anguished {
+    background-image: url("/static/emojis/anguished.png");
+}
+.emoji-ant {
+    background-image: url("/static/emojis/ant.png");
+}
+.emoji-a {
+    background-image: url("/static/emojis/a.png");
+}
+.emoji-apple {
+    background-image: url("/static/emojis/apple.png");
+}
+.emoji-aquarius {
+    background-image: url("/static/emojis/aquarius.png");
+}
+.emoji-aries {
+    background-image: url("/static/emojis/aries.png");
+}
+.emoji-arrow_backward {
+    background-image: url("/static/emojis/arrow_backward.png");
+}
+.emoji-arrow_double_down {
+    background-image: url("/static/emojis/arrow_double_down.png");
+}
+.emoji-arrow_double_up {
+    background-image: url("/static/emojis/arrow_double_up.png");
+}
+.emoji-arrow_down {
+    background-image: url("/static/emojis/arrow_down.png");
+}
+.emoji-arrow_down_small {
+    background-image: url("/static/emojis/arrow_down_small.png");
+}
+.emoji-arrow_forward {
+    background-image: url("/static/emojis/arrow_forward.png");
+}
+.emoji-arrow_heading_down {
+    background-image: url("/static/emojis/arrow_heading_down.png");
+}
+.emoji-arrow_heading_up {
+    background-image: url("/static/emojis/arrow_heading_up.png");
+}
+.emoji-arrow_left {
+    background-image: url("/static/emojis/arrow_left.png");
+}
+.emoji-arrow_lower_left {
+    background-image: url("/static/emojis/arrow_lower_left.png");
+}
+.emoji-arrow_lower_right {
+    background-image: url("/static/emojis/arrow_lower_right.png");
+}
+.emoji-arrow_right_hook {
+    background-image: url("/static/emojis/arrow_right_hook.png");
+}
+.emoji-arrow_right {
+    background-image: url("/static/emojis/arrow_right.png");
+}
+.emoji-arrows_clockwise {
+    background-image: url("/static/emojis/arrows_clockwise.png");
+}
+.emoji-arrows_counterclockwise {
+    background-image: url("/static/emojis/arrows_counterclockwise.png");
+}
+.emoji-arrow_up_down {
+    background-image: url("/static/emojis/arrow_up_down.png");
+}
+.emoji-arrow_upper_left {
+    background-image: url("/static/emojis/arrow_upper_left.png");
+}
+.emoji-arrow_upper_right {
+    background-image: url("/static/emojis/arrow_upper_right.png");
+}
+.emoji-arrow_up {
+    background-image: url("/static/emojis/arrow_up.png");
+}
+.emoji-arrow_up_small {
+    background-image: url("/static/emojis/arrow_up_small.png");
+}
+.emoji-articulated_lorry {
+    background-image: url("/static/emojis/articulated_lorry.png");
+}
+.emoji-art {
+    background-image: url("/static/emojis/art.png");
+}
+.emoji-astonished {
+    background-image: url("/static/emojis/astonished.png");
+}
+.emoji-atm {
+    background-image: url("/static/emojis/atm.png");
+}
+.emoji-baby_bottle {
+    background-image: url("/static/emojis/baby_bottle.png");
+}
+.emoji-baby_chick {
+    background-image: url("/static/emojis/baby_chick.png");
+}
+.emoji-baby {
+    background-image: url("/static/emojis/baby.png");
+}
+.emoji-baby_symbol {
+    background-image: url("/static/emojis/baby_symbol.png");
+}
+.emoji-back {
+    background-image: url("/static/emojis/back.png");
+}
+.emoji-baggage_claim {
+    background-image: url("/static/emojis/baggage_claim.png");
+}
+.emoji-balloon {
+    background-image: url("/static/emojis/balloon.png");
+}
+.emoji-ballot_box_with_check {
+    background-image: url("/static/emojis/ballot_box_with_check.png");
+}
+.emoji-bamboo {
+    background-image: url("/static/emojis/bamboo.png");
+}
+.emoji-banana {
+    background-image: url("/static/emojis/banana.png");
+}
+.emoji-bangbang {
+    background-image: url("/static/emojis/bangbang.png");
+}
+.emoji-bank {
+    background-image: url("/static/emojis/bank.png");
+}
+.emoji-barber {
+    background-image: url("/static/emojis/barber.png");
+}
+.emoji-bar_chart {
+    background-image: url("/static/emojis/bar_chart.png");
+}
+.emoji-baseball {
+    background-image: url("/static/emojis/baseball.png");
+}
+.emoji-basketball {
+    background-image: url("/static/emojis/basketball.png");
+}
+.emoji-bath {
+    background-image: url("/static/emojis/bath.png");
+}
+.emoji-bathtub {
+    background-image: url("/static/emojis/bathtub.png");
+}
+.emoji-battery {
+    background-image: url("/static/emojis/battery.png");
+}
+.emoji-bear {
+    background-image: url("/static/emojis/bear.png");
+}
+.emoji-bee {
+    background-image: url("/static/emojis/bee.png");
+}
+.emoji-beer {
+    background-image: url("/static/emojis/beer.png");
+}
+.emoji-beers {
+    background-image: url("/static/emojis/beers.png");
+}
+.emoji-beetle {
+    background-image: url("/static/emojis/beetle.png");
+}
+.emoji-beginner {
+    background-image: url("/static/emojis/beginner.png");
+}
+.emoji-bell {
+    background-image: url("/static/emojis/bell.png");
+}
+.emoji-bento {
+    background-image: url("/static/emojis/bento.png");
+}
+.emoji-bicyclist {
+    background-image: url("/static/emojis/bicyclist.png");
+}
+.emoji-bike {
+    background-image: url("/static/emojis/bike.png");
+}
+.emoji-bikini {
+    background-image: url("/static/emojis/bikini.png");
+}
+.emoji-bird {
+    background-image: url("/static/emojis/bird.png");
+}
+.emoji-birthday {
+    background-image: url("/static/emojis/birthday.png");
+}
+.emoji-black_circle {
+    background-image: url("/static/emojis/black_circle.png");
+}
+.emoji-black_joker {
+    background-image: url("/static/emojis/black_joker.png");
+}
+.emoji-black_medium_small_square {
+    background-image: url("/static/emojis/black_medium_small_square.png");
+}
+.emoji-black_medium_square {
+    background-image: url("/static/emojis/black_medium_square.png");
+}
+.emoji-black_nib {
+    background-image: url("/static/emojis/black_nib.png");
+}
+.emoji-black_small_square {
+    background-image: url("/static/emojis/black_small_square.png");
+}
+.emoji-black_square_button {
+    background-image: url("/static/emojis/black_square_button.png");
+}
+.emoji-black_square {
+    background-image: url("/static/emojis/black_square.png");
+}
+.emoji-blossom {
+    background-image: url("/static/emojis/blossom.png");
+}
+.emoji-blowfish {
+    background-image: url("/static/emojis/blowfish.png");
+}
+.emoji-blue_book {
+    background-image: url("/static/emojis/blue_book.png");
+}
+.emoji-blue_car {
+    background-image: url("/static/emojis/blue_car.png");
+}
+.emoji-blue_heart {
+    background-image: url("/static/emojis/blue_heart.png");
+}
+.emoji-blush {
+    background-image: url("/static/emojis/blush.png");
+}
+.emoji-boar {
+    background-image: url("/static/emojis/boar.png");
+}
+.emoji-boat {
+    background-image: url("/static/emojis/boat.png");
+}
+.emoji-bomb {
+    background-image: url("/static/emojis/bomb.png");
+}
+.emoji-bookmark {
+    background-image: url("/static/emojis/bookmark.png");
+}
+.emoji-bookmark_tabs {
+    background-image: url("/static/emojis/bookmark_tabs.png");
+}
+.emoji-book {
+    background-image: url("/static/emojis/book.png");
+}
+.emoji-books {
+    background-image: url("/static/emojis/books.png");
+}
+.emoji-boom {
+    background-image: url("/static/emojis/boom.png");
+}
+.emoji-boot {
+    background-image: url("/static/emojis/boot.png");
+}
+.emoji-bouquet {
+    background-image: url("/static/emojis/bouquet.png");
+}
+.emoji-bowling {
+    background-image: url("/static/emojis/bowling.png");
+}
+.emoji-bow {
+    background-image: url("/static/emojis/bow.png");
+}
+.emoji-bowtie {
+    background-image: url("/static/emojis/bowtie.png");
+}
+.emoji-boy {
+    background-image: url("/static/emojis/boy.png");
+}
+.emoji-b {
+    background-image: url("/static/emojis/b.png");
+}
+.emoji-bread {
+    background-image: url("/static/emojis/bread.png");
+}
+.emoji-bride_with_veil {
+    background-image: url("/static/emojis/bride_with_veil.png");
+}
+.emoji-bridge_at_night {
+    background-image: url("/static/emojis/bridge_at_night.png");
+}
+.emoji-briefcase {
+    background-image: url("/static/emojis/briefcase.png");
+}
+.emoji-broken_heart {
+    background-image: url("/static/emojis/broken_heart.png");
+}
+.emoji-bug {
+    background-image: url("/static/emojis/bug.png");
+}
+.emoji-bulb {
+    background-image: url("/static/emojis/bulb.png");
+}
+.emoji-bullettrain_front {
+    background-image: url("/static/emojis/bullettrain_front.png");
+}
+.emoji-bullettrain_side {
+    background-image: url("/static/emojis/bullettrain_side.png");
+}
+.emoji-bus {
+    background-image: url("/static/emojis/bus.png");
+}
+.emoji-busstop {
+    background-image: url("/static/emojis/busstop.png");
+}
+.emoji-bust_in_silhouette {
+    background-image: url("/static/emojis/bust_in_silhouette.png");
+}
+.emoji-busts_in_silhouette {
+    background-image: url("/static/emojis/busts_in_silhouette.png");
+}
+.emoji-cactus {
+    background-image: url("/static/emojis/cactus.png");
+}
+.emoji-cake {
+    background-image: url("/static/emojis/cake.png");
+}
+.emoji-calendar {
+    background-image: url("/static/emojis/calendar.png");
+}
+.emoji-calling {
+    background-image: url("/static/emojis/calling.png");
+}
+.emoji-camel {
+    background-image: url("/static/emojis/camel.png");
+}
+.emoji-camera {
+    background-image: url("/static/emojis/camera.png");
+}
+.emoji-cancer {
+    background-image: url("/static/emojis/cancer.png");
+}
+.emoji-candy {
+    background-image: url("/static/emojis/candy.png");
+}
+.emoji-capital_abcd {
+    background-image: url("/static/emojis/capital_abcd.png");
+}
+.emoji-capricorn {
+    background-image: url("/static/emojis/capricorn.png");
+}
+.emoji-card_index {
+    background-image: url("/static/emojis/card_index.png");
+}
+.emoji-carousel_horse {
+    background-image: url("/static/emojis/carousel_horse.png");
+}
+.emoji-car {
+    background-image: url("/static/emojis/car.png");
+}
+.emoji-cat2 {
+    background-image: url("/static/emojis/cat2.png");
+}
+.emoji-cat {
+    background-image: url("/static/emojis/cat.png");
+}
+.emoji-cd {
+    background-image: url("/static/emojis/cd.png");
+}
+.emoji-chart {
+    background-image: url("/static/emojis/chart.png");
+}
+.emoji-chart_with_downwards_trend {
+    background-image: url("/static/emojis/chart_with_downwards_trend.png");
+}
+.emoji-chart_with_upwards_trend {
+    background-image: url("/static/emojis/chart_with_upwards_trend.png");
+}
+.emoji-checkered_flag {
+    background-image: url("/static/emojis/checkered_flag.png");
+}
+.emoji-cherries {
+    background-image: url("/static/emojis/cherries.png");
+}
+.emoji-cherry_blossom {
+    background-image: url("/static/emojis/cherry_blossom.png");
+}
+.emoji-chestnut {
+    background-image: url("/static/emojis/chestnut.png");
+}
+.emoji-chicken {
+    background-image: url("/static/emojis/chicken.png");
+}
+.emoji-children_crossing {
+    background-image: url("/static/emojis/children_crossing.png");
+}
+.emoji-chocolate_bar {
+    background-image: url("/static/emojis/chocolate_bar.png");
+}
+.emoji-christmas_tree {
+    background-image: url("/static/emojis/christmas_tree.png");
+}
+.emoji-church {
+    background-image: url("/static/emojis/church.png");
+}
+.emoji-cinema {
+    background-image: url("/static/emojis/cinema.png");
+}
+.emoji-circus_tent {
+    background-image: url("/static/emojis/circus_tent.png");
+}
+.emoji-city_sunrise {
+    background-image: url("/static/emojis/city_sunrise.png");
+}
+.emoji-city_sunset {
+    background-image: url("/static/emojis/city_sunset.png");
+}
+.emoji-clapper {
+    background-image: url("/static/emojis/clapper.png");
+}
+.emoji-clap {
+    background-image: url("/static/emojis/clap.png");
+}
+.emoji-clipboard {
+    background-image: url("/static/emojis/clipboard.png");
+}
+.emoji-clock1030 {
+    background-image: url("/static/emojis/clock1030.png");
+}
+.emoji-clock10 {
+    background-image: url("/static/emojis/clock10.png");
+}
+.emoji-clock1130 {
+    background-image: url("/static/emojis/clock1130.png");
+}
+.emoji-clock11 {
+    background-image: url("/static/emojis/clock11.png");
+}
+.emoji-clock1230 {
+    background-image: url("/static/emojis/clock1230.png");
+}
+.emoji-clock12 {
+    background-image: url("/static/emojis/clock12.png");
+}
+.emoji-clock130 {
+    background-image: url("/static/emojis/clock130.png");
+}
+.emoji-clock1 {
+    background-image: url("/static/emojis/clock1.png");
+}
+.emoji-clock230 {
+    background-image: url("/static/emojis/clock230.png");
+}
+.emoji-clock2 {
+    background-image: url("/static/emojis/clock2.png");
+}
+.emoji-clock330 {
+    background-image: url("/static/emojis/clock330.png");
+}
+.emoji-clock3 {
+    background-image: url("/static/emojis/clock3.png");
+}
+.emoji-clock430 {
+    background-image: url("/static/emojis/clock430.png");
+}
+.emoji-clock4 {
+    background-image: url("/static/emojis/clock4.png");
+}
+.emoji-clock530 {
+    background-image: url("/static/emojis/clock530.png");
+}
+.emoji-clock5 {
+    background-image: url("/static/emojis/clock5.png");
+}
+.emoji-clock630 {
+    background-image: url("/static/emojis/clock630.png");
+}
+.emoji-clock6 {
+    background-image: url("/static/emojis/clock6.png");
+}
+.emoji-clock730 {
+    background-image: url("/static/emojis/clock730.png");
+}
+.emoji-clock7 {
+    background-image: url("/static/emojis/clock7.png");
+}
+.emoji-clock830 {
+    background-image: url("/static/emojis/clock830.png");
+}
+.emoji-clock8 {
+    background-image: url("/static/emojis/clock8.png");
+}
+.emoji-clock930 {
+    background-image: url("/static/emojis/clock930.png");
+}
+.emoji-clock9 {
+    background-image: url("/static/emojis/clock9.png");
+}
+.emoji-closed_book {
+    background-image: url("/static/emojis/closed_book.png");
+}
+.emoji-closed_lock_with_key {
+    background-image: url("/static/emojis/closed_lock_with_key.png");
+}
+.emoji-closed_umbrella {
+    background-image: url("/static/emojis/closed_umbrella.png");
+}
+.emoji-cloud {
+    background-image: url("/static/emojis/cloud.png");
+}
+.emoji-cl {
+    background-image: url("/static/emojis/cl.png");
+}
+.emoji-clubs {
+    background-image: url("/static/emojis/clubs.png");
+}
+.emoji-cn {
+    background-image: url("/static/emojis/cn.png");
+}
+.emoji-cocktail {
+    background-image: url("/static/emojis/cocktail.png");
+}
+.emoji-coffee {
+    background-image: url("/static/emojis/coffee.png");
+}
+.emoji-cold_sweat {
+    background-image: url("/static/emojis/cold_sweat.png");
+}
+.emoji-collision {
+    background-image: url("/static/emojis/collision.png");
+}
+.emoji-computer {
+    background-image: url("/static/emojis/computer.png");
+}
+.emoji-confetti_ball {
+    background-image: url("/static/emojis/confetti_ball.png");
+}
+.emoji-confounded {
+    background-image: url("/static/emojis/confounded.png");
+}
+.emoji-confused {
+    background-image: url("/static/emojis/confused.png");
+}
+.emoji-congratulations {
+    background-image: url("/static/emojis/congratulations.png");
+}
+.emoji-construction {
+    background-image: url("/static/emojis/construction.png");
+}
+.emoji-construction_worker {
+    background-image: url("/static/emojis/construction_worker.png");
+}
+.emoji-convenience_store {
+    background-image: url("/static/emojis/convenience_store.png");
+}
+.emoji-cookie {
+    background-image: url("/static/emojis/cookie.png");
+}
+.emoji-cool {
+    background-image: url("/static/emojis/cool.png");
+}
+.emoji-cop {
+    background-image: url("/static/emojis/cop.png");
+}
+.emoji-copyright {
+    background-image: url("/static/emojis/copyright.png");
+}
+.emoji-corn {
+    background-image: url("/static/emojis/corn.png");
+}
+.emoji-couplekiss {
+    background-image: url("/static/emojis/couplekiss.png");
+}
+.emoji-couple {
+    background-image: url("/static/emojis/couple.png");
+}
+.emoji-couple_with_heart {
+    background-image: url("/static/emojis/couple_with_heart.png");
+}
+.emoji-cow2 {
+    background-image: url("/static/emojis/cow2.png");
+}
+.emoji-cow {
+    background-image: url("/static/emojis/cow.png");
+}
+.emoji-credit_card {
+    background-image: url("/static/emojis/credit_card.png");
+}
+.emoji-crocodile {
+    background-image: url("/static/emojis/crocodile.png");
+}
+.emoji-crossed_flags {
+    background-image: url("/static/emojis/crossed_flags.png");
+}
+.emoji-crown {
+    background-image: url("/static/emojis/crown.png");
+}
+.emoji-crying_cat_face {
+    background-image: url("/static/emojis/crying_cat_face.png");
+}
+.emoji-cry {
+    background-image: url("/static/emojis/cry.png");
+}
+.emoji-crystal_ball {
+    background-image: url("/static/emojis/crystal_ball.png");
+}
+.emoji-cupid {
+    background-image: url("/static/emojis/cupid.png");
+}
+.emoji-curly_loop {
+    background-image: url("/static/emojis/curly_loop.png");
+}
+.emoji-currency_exchange {
+    background-image: url("/static/emojis/currency_exchange.png");
+}
+.emoji-curry {
+    background-image: url("/static/emojis/curry.png");
+}
+.emoji-custard {
+    background-image: url("/static/emojis/custard.png");
+}
+.emoji-customs {
+    background-image: url("/static/emojis/customs.png");
+}
+.emoji-cyclone {
+    background-image: url("/static/emojis/cyclone.png");
+}
+.emoji-dancer {
+    background-image: url("/static/emojis/dancer.png");
+}
+.emoji-dancers {
+    background-image: url("/static/emojis/dancers.png");
+}
+.emoji-dango {
+    background-image: url("/static/emojis/dango.png");
+}
+.emoji-dart {
+    background-image: url("/static/emojis/dart.png");
+}
+.emoji-dash {
+    background-image: url("/static/emojis/dash.png");
+}
+.emoji-date {
+    background-image: url("/static/emojis/date.png");
+}
+.emoji-deciduous_tree {
+    background-image: url("/static/emojis/deciduous_tree.png");
+}
+.emoji-department_store {
+    background-image: url("/static/emojis/department_store.png");
+}
+.emoji-de {
+    background-image: url("/static/emojis/de.png");
+}
+.emoji-diamond_shape_with_a_dot_inside {
+    background-image: url("/static/emojis/diamond_shape_with_a_dot_inside.png");
+}
+.emoji-diamonds {
+    background-image: url("/static/emojis/diamonds.png");
+}
+.emoji-disappointed {
+    background-image: url("/static/emojis/disappointed.png");
+}
+.emoji-disappointed_relieved {
+    background-image: url("/static/emojis/disappointed_relieved.png");
+}
+.emoji-dizzy_face {
+    background-image: url("/static/emojis/dizzy_face.png");
+}
+.emoji-dizzy {
+    background-image: url("/static/emojis/dizzy.png");
+}
+.emoji-dog2 {
+    background-image: url("/static/emojis/dog2.png");
+}
+.emoji-dog {
+    background-image: url("/static/emojis/dog.png");
+}
+.emoji-dollar {
+    background-image: url("/static/emojis/dollar.png");
+}
+.emoji-dolls {
+    background-image: url("/static/emojis/dolls.png");
+}
+.emoji-dolphin {
+    background-image: url("/static/emojis/dolphin.png");
+}
+.emoji-do_not_litter {
+    background-image: url("/static/emojis/do_not_litter.png");
+}
+.emoji-donut {
+    background-image: url("/static/emojis/donut.png");
+}
+.emoji-door {
+    background-image: url("/static/emojis/door.png");
+}
+.emoji-doughnut {
+    background-image: url("/static/emojis/doughnut.png");
+}
+.emoji-dragon_face {
+    background-image: url("/static/emojis/dragon_face.png");
+}
+.emoji-dragon {
+    background-image: url("/static/emojis/dragon.png");
+}
+.emoji-dress {
+    background-image: url("/static/emojis/dress.png");
+}
+.emoji-dromedary_camel {
+    background-image: url("/static/emojis/dromedary_camel.png");
+}
+.emoji-droplet {
+    background-image: url("/static/emojis/droplet.png");
+}
+.emoji-dvd {
+    background-image: url("/static/emojis/dvd.png");
+}
+.emoji-ear_of_rice {
+    background-image: url("/static/emojis/ear_of_rice.png");
+}
+.emoji-ear {
+    background-image: url("/static/emojis/ear.png");
+}
+.emoji-earth_africa {
+    background-image: url("/static/emojis/earth_africa.png");
+}
+.emoji-earth_americas {
+    background-image: url("/static/emojis/earth_americas.png");
+}
+.emoji-earth_asia {
+    background-image: url("/static/emojis/earth_asia.png");
+}
+.emoji-eggplant {
+    background-image: url("/static/emojis/eggplant.png");
+}
+.emoji-egg {
+    background-image: url("/static/emojis/egg.png");
+}
+.emoji-eight {
+    background-image: url("/static/emojis/eight.png");
+}
+.emoji-eight_pointed_black_star {
+    background-image: url("/static/emojis/eight_pointed_black_star.png");
+}
+.emoji-eight_spoked_asterisk {
+    background-image: url("/static/emojis/eight_spoked_asterisk.png");
+}
+.emoji-electric_plug {
+    background-image: url("/static/emojis/electric_plug.png");
+}
+.emoji-elephant {
+    background-image: url("/static/emojis/elephant.png");
+}
+.emoji-e-mail {
+    background-image: url("/static/emojis/e-mail.png");
+}
+.emoji-email {
+    background-image: url("/static/emojis/email.png");
+}
+.emoji-end {
+    background-image: url("/static/emojis/end.png");
+}
+.emoji-envelope {
+    background-image: url("/static/emojis/envelope.png");
+}
+.emoji-es {
+    background-image: url("/static/emojis/es.png");
+}
+.emoji-european_castle {
+    background-image: url("/static/emojis/european_castle.png");
+}
+.emoji-european_post_office {
+    background-image: url("/static/emojis/european_post_office.png");
+}
+.emoji-euro {
+    background-image: url("/static/emojis/euro.png");
+}
+.emoji-evergreen_tree {
+    background-image: url("/static/emojis/evergreen_tree.png");
+}
+.emoji-exclamation {
+    background-image: url("/static/emojis/exclamation.png");
+}
+.emoji-expressionless {
+    background-image: url("/static/emojis/expressionless.png");
+}
+.emoji-eyeglasses {
+    background-image: url("/static/emojis/eyeglasses.png");
+}
+.emoji-eyes {
+    background-image: url("/static/emojis/eyes.png");
+}
+.emoji-facepunch {
+    background-image: url("/static/emojis/facepunch.png");
+}
+.emoji-factory {
+    background-image: url("/static/emojis/factory.png");
+}
+.emoji-fallen_leaf {
+    background-image: url("/static/emojis/fallen_leaf.png");
+}
+.emoji-family {
+    background-image: url("/static/emojis/family.png");
+}
+.emoji-fast_forward {
+    background-image: url("/static/emojis/fast_forward.png");
+}
+.emoji-fax {
+    background-image: url("/static/emojis/fax.png");
+}
+.emoji-fearful {
+    background-image: url("/static/emojis/fearful.png");
+}
+.emoji-feelsgood {
+    background-image: url("/static/emojis/feelsgood.png");
+}
+.emoji-feet {
+    background-image: url("/static/emojis/feet.png");
+}
+.emoji-ferris_wheel {
+    background-image: url("/static/emojis/ferris_wheel.png");
+}
+.emoji-file_folder {
+    background-image: url("/static/emojis/file_folder.png");
+}
+.emoji-finnadie {
+    background-image: url("/static/emojis/finnadie.png");
+}
+.emoji-fire_engine {
+    background-image: url("/static/emojis/fire_engine.png");
+}
+.emoji-fire {
+    background-image: url("/static/emojis/fire.png");
+}
+.emoji-fireworks {
+    background-image: url("/static/emojis/fireworks.png");
+}
+.emoji-first_quarter_moon {
+    background-image: url("/static/emojis/first_quarter_moon.png");
+}
+.emoji-first_quarter_moon_with_face {
+    background-image: url("/static/emojis/first_quarter_moon_with_face.png");
+}
+.emoji-fish_cake {
+    background-image: url("/static/emojis/fish_cake.png");
+}
+.emoji-fishing_pole_and_fish {
+    background-image: url("/static/emojis/fishing_pole_and_fish.png");
+}
+.emoji-fish {
+    background-image: url("/static/emojis/fish.png");
+}
+.emoji-fist {
+    background-image: url("/static/emojis/fist.png");
+}
+.emoji-five {
+    background-image: url("/static/emojis/five.png");
+}
+.emoji-flags {
+    background-image: url("/static/emojis/flags.png");
+}
+.emoji-flashlight {
+    background-image: url("/static/emojis/flashlight.png");
+}
+.emoji-floppy_disk {
+    background-image: url("/static/emojis/floppy_disk.png");
+}
+.emoji-flower_playing_cards {
+    background-image: url("/static/emojis/flower_playing_cards.png");
+}
+.emoji-flushed {
+    background-image: url("/static/emojis/flushed.png");
+}
+.emoji-foggy {
+    background-image: url("/static/emojis/foggy.png");
+}
+.emoji-football {
+    background-image: url("/static/emojis/football.png");
+}
+.emoji-fork_and_knife {
+    background-image: url("/static/emojis/fork_and_knife.png");
+}
+.emoji-fountain {
+    background-image: url("/static/emojis/fountain.png");
+}
+.emoji-four_leaf_clover {
+    background-image: url("/static/emojis/four_leaf_clover.png");
+}
+.emoji-four {
+    background-image: url("/static/emojis/four.png");
+}
+.emoji-free {
+    background-image: url("/static/emojis/free.png");
+}
+.emoji-fried_shrimp {
+    background-image: url("/static/emojis/fried_shrimp.png");
+}
+.emoji-fries {
+    background-image: url("/static/emojis/fries.png");
+}
+.emoji-frog {
+    background-image: url("/static/emojis/frog.png");
+}
+.emoji-frowning {
+    background-image: url("/static/emojis/frowning.png");
+}
+.emoji-fr {
+    background-image: url("/static/emojis/fr.png");
+}
+.emoji-fuelpump {
+    background-image: url("/static/emojis/fuelpump.png");
+}
+.emoji-full_moon {
+    background-image: url("/static/emojis/full_moon.png");
+}
+.emoji-full_moon_with_face {
+    background-image: url("/static/emojis/full_moon_with_face.png");
+}
+.emoji-fu {
+    background-image: url("/static/emojis/fu.png");
+}
+.emoji-game_die {
+    background-image: url("/static/emojis/game_die.png");
+}
+.emoji-gb {
+    background-image: url("/static/emojis/gb.png");
+}
+.emoji-gemini {
+    background-image: url("/static/emojis/gemini.png");
+}
+.emoji-gem {
+    background-image: url("/static/emojis/gem.png");
+}
+.emoji-ghost {
+    background-image: url("/static/emojis/ghost.png");
+}
+.emoji-gift_heart {
+    background-image: url("/static/emojis/gift_heart.png");
+}
+.emoji-gift {
+    background-image: url("/static/emojis/gift.png");
+}
+.emoji-girl {
+    background-image: url("/static/emojis/girl.png");
+}
+.emoji-globe_with_meridians {
+    background-image: url("/static/emojis/globe_with_meridians.png");
+}
+.emoji-goat {
+    background-image: url("/static/emojis/goat.png");
+}
+.emoji-goberserk {
+    background-image: url("/static/emojis/goberserk.png");
+}
+.emoji-godmode {
+    background-image: url("/static/emojis/godmode.png");
+}
+.emoji-golf {
+    background-image: url("/static/emojis/golf.png");
+}
+.emoji-grapes {
+    background-image: url("/static/emojis/grapes.png");
+}
+.emoji-green_apple {
+    background-image: url("/static/emojis/green_apple.png");
+}
+.emoji-green_book {
+    background-image: url("/static/emojis/green_book.png");
+}
+.emoji-green_heart {
+    background-image: url("/static/emojis/green_heart.png");
+}
+.emoji-grey_exclamation {
+    background-image: url("/static/emojis/grey_exclamation.png");
+}
+.emoji-grey_question {
+    background-image: url("/static/emojis/grey_question.png");
+}
+.emoji-grimacing {
+    background-image: url("/static/emojis/grimacing.png");
+}
+.emoji-grinning {
+    background-image: url("/static/emojis/grinning.png");
+}
+.emoji-grin {
+    background-image: url("/static/emojis/grin.png");
+}
+.emoji-guardsman {
+    background-image: url("/static/emojis/guardsman.png");
+}
+.emoji-guitar {
+    background-image: url("/static/emojis/guitar.png");
+}
+.emoji-gun {
+    background-image: url("/static/emojis/gun.png");
+}
+.emoji-haircut {
+    background-image: url("/static/emojis/haircut.png");
+}
+.emoji-hamburger {
+    background-image: url("/static/emojis/hamburger.png");
+}
+.emoji-hammer {
+    background-image: url("/static/emojis/hammer.png");
+}
+.emoji-hamster {
+    background-image: url("/static/emojis/hamster.png");
+}
+.emoji-handbag {
+    background-image: url("/static/emojis/handbag.png");
+}
+.emoji-hand {
+    background-image: url("/static/emojis/hand.png");
+}
+.emoji-hankey {
+    background-image: url("/static/emojis/hankey.png");
+}
+.emoji-hash {
+    background-image: url("/static/emojis/hash.png");
+}
+.emoji-hatched_chick {
+    background-image: url("/static/emojis/hatched_chick.png");
+}
+.emoji-hatching_chick {
+    background-image: url("/static/emojis/hatching_chick.png");
+}
+.emoji-headphones {
+    background-image: url("/static/emojis/headphones.png");
+}
+.emoji-hear_no_evil {
+    background-image: url("/static/emojis/hear_no_evil.png");
+}
+.emoji-heartbeat {
+    background-image: url("/static/emojis/heartbeat.png");
+}
+.emoji-heart_decoration {
+    background-image: url("/static/emojis/heart_decoration.png");
+}
+.emoji-heart_eyes_cat {
+    background-image: url("/static/emojis/heart_eyes_cat.png");
+}
+.emoji-heart_eyes {
+    background-image: url("/static/emojis/heart_eyes.png");
+}
+.emoji-heart {
+    background-image: url("/static/emojis/heart.png");
+}
+.emoji-heartpulse {
+    background-image: url("/static/emojis/heartpulse.png");
+}
+.emoji-hearts {
+    background-image: url("/static/emojis/hearts.png");
+}
+.emoji-heavy_check_mark {
+    background-image: url("/static/emojis/heavy_check_mark.png");
+}
+.emoji-heavy_division_sign {
+    background-image: url("/static/emojis/heavy_division_sign.png");
+}
+.emoji-heavy_dollar_sign {
+    background-image: url("/static/emojis/heavy_dollar_sign.png");
+}
+.emoji-heavy_exclamation_mark {
+    background-image: url("/static/emojis/heavy_exclamation_mark.png");
+}
+.emoji-heavy_minus_sign {
+    background-image: url("/static/emojis/heavy_minus_sign.png");
+}
+.emoji-heavy_multiplication_x {
+    background-image: url("/static/emojis/heavy_multiplication_x.png");
+}
+.emoji-heavy_plus_sign {
+    background-image: url("/static/emojis/heavy_plus_sign.png");
+}
+.emoji-helicopter {
+    background-image: url("/static/emojis/helicopter.png");
+}
+.emoji-herb {
+    background-image: url("/static/emojis/herb.png");
+}
+.emoji-hibiscus {
+    background-image: url("/static/emojis/hibiscus.png");
+}
+.emoji-high_brightness {
+    background-image: url("/static/emojis/high_brightness.png");
+}
+.emoji-high_heel {
+    background-image: url("/static/emojis/high_heel.png");
+}
+.emoji-hocho {
+    background-image: url("/static/emojis/hocho.png");
+}
+.emoji-honeybee {
+    background-image: url("/static/emojis/honeybee.png");
+}
+.emoji-honey_pot {
+    background-image: url("/static/emojis/honey_pot.png");
+}
+.emoji-horse {
+    background-image: url("/static/emojis/horse.png");
+}
+.emoji-horse_racing {
+    background-image: url("/static/emojis/horse_racing.png");
+}
+.emoji-hospital {
+    background-image: url("/static/emojis/hospital.png");
+}
+.emoji-hotel {
+    background-image: url("/static/emojis/hotel.png");
+}
+.emoji-hotsprings {
+    background-image: url("/static/emojis/hotsprings.png");
+}
+.emoji-hourglass_flowing_sand {
+    background-image: url("/static/emojis/hourglass_flowing_sand.png");
+}
+.emoji-hourglass {
+    background-image: url("/static/emojis/hourglass.png");
+}
+.emoji-house {
+    background-image: url("/static/emojis/house.png");
+}
+.emoji-house_with_garden {
+    background-image: url("/static/emojis/house_with_garden.png");
+}
+.emoji-hurtrealbad {
+    background-image: url("/static/emojis/hurtrealbad.png");
+}
+.emoji-hushed {
+    background-image: url("/static/emojis/hushed.png");
+}
+.emoji-ice_cream {
+    background-image: url("/static/emojis/ice_cream.png");
+}
+.emoji-icecream {
+    background-image: url("/static/emojis/icecream.png");
+}
+.emoji-ideograph_advantage {
+    background-image: url("/static/emojis/ideograph_advantage.png");
+}
+.emoji-id {
+    background-image: url("/static/emojis/id.png");
+}
+.emoji-imp {
+    background-image: url("/static/emojis/imp.png");
+}
+.emoji-inbox_tray {
+    background-image: url("/static/emojis/inbox_tray.png");
+}
+.emoji-incoming_envelope {
+    background-image: url("/static/emojis/incoming_envelope.png");
+}
+.emoji-information_desk_person {
+    background-image: url("/static/emojis/information_desk_person.png");
+}
+.emoji-information_source {
+    background-image: url("/static/emojis/information_source.png");
+}
+.emoji-innocent {
+    background-image: url("/static/emojis/innocent.png");
+}
+.emoji-interrobang {
+    background-image: url("/static/emojis/interrobang.png");
+}
+.emoji-iphone {
+    background-image: url("/static/emojis/iphone.png");
+}
+.emoji-it {
+    background-image: url("/static/emojis/it.png");
+}
+.emoji-izakaya_lantern {
+    background-image: url("/static/emojis/izakaya_lantern.png");
+}
+.emoji-jack_o_lantern {
+    background-image: url("/static/emojis/jack_o_lantern.png");
+}
+.emoji-japanese_castle {
+    background-image: url("/static/emojis/japanese_castle.png");
+}
+.emoji-japanese_goblin {
+    background-image: url("/static/emojis/japanese_goblin.png");
+}
+.emoji-japanese_ogre {
+    background-image: url("/static/emojis/japanese_ogre.png");
+}
+.emoji-japan {
+    background-image: url("/static/emojis/japan.png");
+}
+.emoji-jeans {
+    background-image: url("/static/emojis/jeans.png");
+}
+.emoji-joy_cat {
+    background-image: url("/static/emojis/joy_cat.png");
+}
+.emoji-joy {
+    background-image: url("/static/emojis/joy.png");
+}
+.emoji-jp {
+    background-image: url("/static/emojis/jp.png");
+}
+.emoji-keycap_ten {
+    background-image: url("/static/emojis/keycap_ten.png");
+}
+.emoji-key {
+    background-image: url("/static/emojis/key.png");
+}
+.emoji-kimono {
+    background-image: url("/static/emojis/kimono.png");
+}
+.emoji-kissing_cat {
+    background-image: url("/static/emojis/kissing_cat.png");
+}
+.emoji-kissing_closed_eyes {
+    background-image: url("/static/emojis/kissing_closed_eyes.png");
+}
+.emoji-kissing_face {
+    background-image: url("/static/emojis/kissing_face.png");
+}
+.emoji-kissing_heart {
+    background-image: url("/static/emojis/kissing_heart.png");
+}
+.emoji-kissing {
+    background-image: url("/static/emojis/kissing.png");
+}
+.emoji-kissing_smiling_eyes {
+    background-image: url("/static/emojis/kissing_smiling_eyes.png");
+}
+.emoji-kiss {
+    background-image: url("/static/emojis/kiss.png");
+}
+.emoji-koala {
+    background-image: url("/static/emojis/koala.png");
+}
+.emoji-koko {
+    background-image: url("/static/emojis/koko.png");
+}
+.emoji-kr {
+    background-image: url("/static/emojis/kr.png");
+}
+.emoji-large_blue_circle {
+    background-image: url("/static/emojis/large_blue_circle.png");
+}
+.emoji-large_blue_diamond {
+    background-image: url("/static/emojis/large_blue_diamond.png");
+}
+.emoji-large_orange_diamond {
+    background-image: url("/static/emojis/large_orange_diamond.png");
+}
+.emoji-last_quarter_moon {
+    background-image: url("/static/emojis/last_quarter_moon.png");
+}
+.emoji-last_quarter_moon_with_face {
+    background-image: url("/static/emojis/last_quarter_moon_with_face.png");
+}
+.emoji-laughing {
+    background-image: url("/static/emojis/laughing.png");
+}
+.emoji-leaves {
+    background-image: url("/static/emojis/leaves.png");
+}
+.emoji-ledger {
+    background-image: url("/static/emojis/ledger.png");
+}
+.emoji-left_luggage {
+    background-image: url("/static/emojis/left_luggage.png");
+}
+.emoji-left_right_arrow {
+    background-image: url("/static/emojis/left_right_arrow.png");
+}
+.emoji-leftwards_arrow_with_hook {
+    background-image: url("/static/emojis/leftwards_arrow_with_hook.png");
+}
+.emoji-lemon {
+    background-image: url("/static/emojis/lemon.png");
+}
+.emoji-leopard {
+    background-image: url("/static/emojis/leopard.png");
+}
+.emoji-leo {
+    background-image: url("/static/emojis/leo.png");
+}
+.emoji-libra {
+    background-image: url("/static/emojis/libra.png");
+}
+.emoji-light_rail {
+    background-image: url("/static/emojis/light_rail.png");
+}
+.emoji-link {
+    background-image: url("/static/emojis/link.png");
+}
+.emoji-lips {
+    background-image: url("/static/emojis/lips.png");
+}
+.emoji-lipstick {
+    background-image: url("/static/emojis/lipstick.png");
+}
+.emoji-lock {
+    background-image: url("/static/emojis/lock.png");
+}
+.emoji-lock_with_ink_pen {
+    background-image: url("/static/emojis/lock_with_ink_pen.png");
+}
+.emoji-lollipop {
+    background-image: url("/static/emojis/lollipop.png");
+}
+.emoji-loop {
+    background-image: url("/static/emojis/loop.png");
+}
+.emoji-loudspeaker {
+    background-image: url("/static/emojis/loudspeaker.png");
+}
+.emoji-love_hotel {
+    background-image: url("/static/emojis/love_hotel.png");
+}
+.emoji-love_letter {
+    background-image: url("/static/emojis/love_letter.png");
+}
+.emoji-low_brightness {
+    background-image: url("/static/emojis/low_brightness.png");
+}
+.emoji-mag {
+    background-image: url("/static/emojis/mag.png");
+}
+.emoji-mag_right {
+    background-image: url("/static/emojis/mag_right.png");
+}
+.emoji-mahjong {
+    background-image: url("/static/emojis/mahjong.png");
+}
+.emoji-mailbox_closed {
+    background-image: url("/static/emojis/mailbox_closed.png");
+}
+.emoji-mailbox {
+    background-image: url("/static/emojis/mailbox.png");
+}
+.emoji-mailbox_with_mail {
+    background-image: url("/static/emojis/mailbox_with_mail.png");
+}
+.emoji-mailbox_with_no_mail {
+    background-image: url("/static/emojis/mailbox_with_no_mail.png");
+}
+.emoji-man {
+    background-image: url("/static/emojis/man.png");
+}
+.emoji-mans_shoe {
+    background-image: url("/static/emojis/mans_shoe.png");
+}
+.emoji-man_with_gua_pi_mao {
+    background-image: url("/static/emojis/man_with_gua_pi_mao.png");
+}
+.emoji-man_with_turban {
+    background-image: url("/static/emojis/man_with_turban.png");
+}
+.emoji-maple_leaf {
+    background-image: url("/static/emojis/maple_leaf.png");
+}
+.emoji-mask {
+    background-image: url("/static/emojis/mask.png");
+}
+.emoji-massage {
+    background-image: url("/static/emojis/massage.png");
+}
+.emoji-meat_on_bone {
+    background-image: url("/static/emojis/meat_on_bone.png");
+}
+.emoji-mega {
+    background-image: url("/static/emojis/mega.png");
+}
+.emoji-melon {
+    background-image: url("/static/emojis/melon.png");
+}
+.emoji-memo {
+    background-image: url("/static/emojis/memo.png");
+}
+.emoji-mens {
+    background-image: url("/static/emojis/mens.png");
+}
+.emoji-metal {
+    background-image: url("/static/emojis/metal.png");
+}
+.emoji-metro {
+    background-image: url("/static/emojis/metro.png");
+}
+.emoji-microphone {
+    background-image: url("/static/emojis/microphone.png");
+}
+.emoji-microscope {
+    background-image: url("/static/emojis/microscope.png");
+}
+.emoji-milky_way {
+    background-image: url("/static/emojis/milky_way.png");
+}
+.emoji-minibus {
+    background-image: url("/static/emojis/minibus.png");
+}
+.emoji-minidisc {
+    background-image: url("/static/emojis/minidisc.png");
+}
+.emoji-mobile_phone_off {
+    background-image: url("/static/emojis/mobile_phone_off.png");
+}
+.emoji-moneybag {
+    background-image: url("/static/emojis/moneybag.png");
+}
+.emoji-money_with_wings {
+    background-image: url("/static/emojis/money_with_wings.png");
+}
+.emoji-monkey_face {
+    background-image: url("/static/emojis/monkey_face.png");
+}
+.emoji-monkey {
+    background-image: url("/static/emojis/monkey.png");
+}
+.emoji-monorail {
+    background-image: url("/static/emojis/monorail.png");
+}
+.emoji-moon {
+    background-image: url("/static/emojis/moon.png");
+}
+.emoji-mortar_board {
+    background-image: url("/static/emojis/mortar_board.png");
+}
+.emoji-mountain_bicyclist {
+    background-image: url("/static/emojis/mountain_bicyclist.png");
+}
+.emoji-mountain_cableway {
+    background-image: url("/static/emojis/mountain_cableway.png");
+}
+.emoji-mountain_railway {
+    background-image: url("/static/emojis/mountain_railway.png");
+}
+.emoji-mount_fuji {
+    background-image: url("/static/emojis/mount_fuji.png");
+}
+.emoji-mouse2 {
+    background-image: url("/static/emojis/mouse2.png");
+}
+.emoji-mouse {
+    background-image: url("/static/emojis/mouse.png");
+}
+.emoji-movie_camera {
+    background-image: url("/static/emojis/movie_camera.png");
+}
+.emoji-moyai {
+    background-image: url("/static/emojis/moyai.png");
+}
+.emoji-m {
+    background-image: url("/static/emojis/m.png");
+}
+.emoji-muscle {
+    background-image: url("/static/emojis/muscle.png");
+}
+.emoji-mushroom {
+    background-image: url("/static/emojis/mushroom.png");
+}
+.emoji-musical_keyboard {
+    background-image: url("/static/emojis/musical_keyboard.png");
+}
+.emoji-musical_note {
+    background-image: url("/static/emojis/musical_note.png");
+}
+.emoji-musical_score {
+    background-image: url("/static/emojis/musical_score.png");
+}
+.emoji-mute {
+    background-image: url("/static/emojis/mute.png");
+}
+.emoji-nail_care {
+    background-image: url("/static/emojis/nail_care.png");
+}
+.emoji-name_badge {
+    background-image: url("/static/emojis/name_badge.png");
+}
+.emoji-neckbeard {
+    background-image: url("/static/emojis/neckbeard.png");
+}
+.emoji-necktie {
+    background-image: url("/static/emojis/necktie.png");
+}
+.emoji-negative_squared_cross_mark {
+    background-image: url("/static/emojis/negative_squared_cross_mark.png");
+}
+.emoji-neutral_face {
+    background-image: url("/static/emojis/neutral_face.png");
+}
+.emoji-new_moon {
+    background-image: url("/static/emojis/new_moon.png");
+}
+.emoji-new_moon_with_face {
+    background-image: url("/static/emojis/new_moon_with_face.png");
+}
+.emoji-new {
+    background-image: url("/static/emojis/new.png");
+}
+.emoji-newspaper {
+    background-image: url("/static/emojis/newspaper.png");
+}
+.emoji-ng {
+    background-image: url("/static/emojis/ng.png");
+}
+.emoji-nine {
+    background-image: url("/static/emojis/nine.png");
+}
+.emoji-no_bell {
+    background-image: url("/static/emojis/no_bell.png");
+}
+.emoji-no_bicycles {
+    background-image: url("/static/emojis/no_bicycles.png");
+}
+.emoji-no_entry {
+    background-image: url("/static/emojis/no_entry.png");
+}
+.emoji-no_entry_sign {
+    background-image: url("/static/emojis/no_entry_sign.png");
+}
+.emoji-no_good {
+    background-image: url("/static/emojis/no_good.png");
+}
+.emoji-no_mobile_phones {
+    background-image: url("/static/emojis/no_mobile_phones.png");
+}
+.emoji-no_mouth {
+    background-image: url("/static/emojis/no_mouth.png");
+}
+.emoji-non-potable_water {
+    background-image: url("/static/emojis/non-potable_water.png");
+}
+.emoji-no_pedestrians {
+    background-image: url("/static/emojis/no_pedestrians.png");
+}
+.emoji-nose {
+    background-image: url("/static/emojis/nose.png");
+}
+.emoji-no_smoking {
+    background-image: url("/static/emojis/no_smoking.png");
+}
+.emoji-notebook {
+    background-image: url("/static/emojis/notebook.png");
+}
+.emoji-notebook_with_decorative_cover {
+    background-image: url("/static/emojis/notebook_with_decorative_cover.png");
+}
+.emoji-notes {
+    background-image: url("/static/emojis/notes.png");
+}
+.emoji-nut_and_bolt {
+    background-image: url("/static/emojis/nut_and_bolt.png");
+}
+.emoji-o2 {
+    background-image: url("/static/emojis/o2.png");
+}
+.emoji-ocean {
+    background-image: url("/static/emojis/ocean.png");
+}
+.emoji-octocat {
+    background-image: url("/static/emojis/octocat.png");
+}
+.emoji-octopus {
+    background-image: url("/static/emojis/octopus.png");
+}
+.emoji-oden {
+    background-image: url("/static/emojis/oden.png");
+}
+.emoji-office {
+    background-image: url("/static/emojis/office.png");
+}
+.emoji-ok_hand {
+    background-image: url("/static/emojis/ok_hand.png");
+}
+.emoji-ok {
+    background-image: url("/static/emojis/ok.png");
+}
+.emoji-ok_woman {
+    background-image: url("/static/emojis/ok_woman.png");
+}
+.emoji-older_man {
+    background-image: url("/static/emojis/older_man.png");
+}
+.emoji-older_woman {
+    background-image: url("/static/emojis/older_woman.png");
+}
+.emoji-oncoming_automobile {
+    background-image: url("/static/emojis/oncoming_automobile.png");
+}
+.emoji-oncoming_bus {
+    background-image: url("/static/emojis/oncoming_bus.png");
+}
+.emoji-oncoming_police_car {
+    background-image: url("/static/emojis/oncoming_police_car.png");
+}
+.emoji-oncoming_taxi {
+    background-image: url("/static/emojis/oncoming_taxi.png");
+}
+.emoji-one {
+    background-image: url("/static/emojis/one.png");
+}
+.emoji-on {
+    background-image: url("/static/emojis/on.png");
+}
+.emoji-open_file_folder {
+    background-image: url("/static/emojis/open_file_folder.png");
+}
+.emoji-open_hands {
+    background-image: url("/static/emojis/open_hands.png");
+}
+.emoji-open_mouth {
+    background-image: url("/static/emojis/open_mouth.png");
+}
+.emoji-ophiuchus {
+    background-image: url("/static/emojis/ophiuchus.png");
+}
+.emoji-o {
+    background-image: url("/static/emojis/o.png");
+}
+.emoji-orange_book {
+    background-image: url("/static/emojis/orange_book.png");
+}
+.emoji-outbox_tray {
+    background-image: url("/static/emojis/outbox_tray.png");
+}
+.emoji-ox {
+    background-image: url("/static/emojis/ox.png");
+}
+.emoji-package {
+    background-image: url("/static/emojis/package.png");
+}
+.emoji-page_facing_up {
+    background-image: url("/static/emojis/page_facing_up.png");
+}
+.emoji-pager {
+    background-image: url("/static/emojis/pager.png");
+}
+.emoji-page_with_curl {
+    background-image: url("/static/emojis/page_with_curl.png");
+}
+.emoji-palm_tree {
+    background-image: url("/static/emojis/palm_tree.png");
+}
+.emoji-panda_face {
+    background-image: url("/static/emojis/panda_face.png");
+}
+.emoji-paperclip {
+    background-image: url("/static/emojis/paperclip.png");
+}
+.emoji-parking {
+    background-image: url("/static/emojis/parking.png");
+}
+.emoji-part_alternation_mark {
+    background-image: url("/static/emojis/part_alternation_mark.png");
+}
+.emoji-partly_sunny {
+    background-image: url("/static/emojis/partly_sunny.png");
+}
+.emoji-passport_control {
+    background-image: url("/static/emojis/passport_control.png");
+}
+.emoji-paw_prints {
+    background-image: url("/static/emojis/paw_prints.png");
+}
+.emoji-peach {
+    background-image: url("/static/emojis/peach.png");
+}
+.emoji-pear {
+    background-image: url("/static/emojis/pear.png");
+}
+.emoji-pencil2 {
+    background-image: url("/static/emojis/pencil2.png");
+}
+.emoji-pencil {
+    background-image: url("/static/emojis/pencil.png");
+}
+.emoji-penguin {
+    background-image: url("/static/emojis/penguin.png");
+}
+.emoji-pensive {
+    background-image: url("/static/emojis/pensive.png");
+}
+.emoji-performing_arts {
+    background-image: url("/static/emojis/performing_arts.png");
+}
+.emoji-persevere {
+    background-image: url("/static/emojis/persevere.png");
+}
+.emoji-person_frowning {
+    background-image: url("/static/emojis/person_frowning.png");
+}
+.emoji-person_with_blond_hair {
+    background-image: url("/static/emojis/person_with_blond_hair.png");
+}
+.emoji-person_with_pouting_face {
+    background-image: url("/static/emojis/person_with_pouting_face.png");
+}
+.emoji-phone {
+    background-image: url("/static/emojis/phone.png");
+}
+.emoji-pig2 {
+    background-image: url("/static/emojis/pig2.png");
+}
+.emoji-pig_nose {
+    background-image: url("/static/emojis/pig_nose.png");
+}
+.emoji-pig {
+    background-image: url("/static/emojis/pig.png");
+}
+.emoji-pill {
+    background-image: url("/static/emojis/pill.png");
+}
+.emoji-pineapple {
+    background-image: url("/static/emojis/pineapple.png");
+}
+.emoji-pisces {
+    background-image: url("/static/emojis/pisces.png");
+}
+.emoji-pizza {
+    background-image: url("/static/emojis/pizza.png");
+}
+.emoji-plus1 {
+    background-image: url("/static/emojis/plus1.png");
+}
+.emoji-point_down {
+    background-image: url("/static/emojis/point_down.png");
+}
+.emoji-point_left {
+    background-image: url("/static/emojis/point_left.png");
+}
+.emoji-point_right {
+    background-image: url("/static/emojis/point_right.png");
+}
+.emoji-point_up_2 {
+    background-image: url("/static/emojis/point_up_2.png");
+}
+.emoji-point_up {
+    background-image: url("/static/emojis/point_up.png");
+}
+.emoji-police_car {
+    background-image: url("/static/emojis/police_car.png");
+}
+.emoji-poodle {
+    background-image: url("/static/emojis/poodle.png");
+}
+.emoji-poop {
+    background-image: url("/static/emojis/poop.png");
+}
+.emoji-postal_horn {
+    background-image: url("/static/emojis/postal_horn.png");
+}
+.emoji-postbox {
+    background-image: url("/static/emojis/postbox.png");
+}
+.emoji-post_office {
+    background-image: url("/static/emojis/post_office.png");
+}
+.emoji-potable_water {
+    background-image: url("/static/emojis/potable_water.png");
+}
+.emoji-pouch {
+    background-image: url("/static/emojis/pouch.png");
+}
+.emoji-poultry_leg {
+    background-image: url("/static/emojis/poultry_leg.png");
+}
+.emoji-pound {
+    background-image: url("/static/emojis/pound.png");
+}
+.emoji-pouting_cat {
+    background-image: url("/static/emojis/pouting_cat.png");
+}
+.emoji-pray {
+    background-image: url("/static/emojis/pray.png");
+}
+.emoji-princess {
+    background-image: url("/static/emojis/princess.png");
+}
+.emoji-punch {
+    background-image: url("/static/emojis/punch.png");
+}
+.emoji-purple_heart {
+    background-image: url("/static/emojis/purple_heart.png");
+}
+.emoji-purse {
+    background-image: url("/static/emojis/purse.png");
+}
+.emoji-pushpin {
+    background-image: url("/static/emojis/pushpin.png");
+}
+.emoji-put_litter_in_its_place {
+    background-image: url("/static/emojis/put_litter_in_its_place.png");
+}
+.emoji-question {
+    background-image: url("/static/emojis/question.png");
+}
+.emoji-rabbit2 {
+    background-image: url("/static/emojis/rabbit2.png");
+}
+.emoji-rabbit {
+    background-image: url("/static/emojis/rabbit.png");
+}
+.emoji-racehorse {
+    background-image: url("/static/emojis/racehorse.png");
+}
+.emoji-radio_button {
+    background-image: url("/static/emojis/radio_button.png");
+}
+.emoji-radio {
+    background-image: url("/static/emojis/radio.png");
+}
+.emoji-rage1 {
+    background-image: url("/static/emojis/rage1.png");
+}
+.emoji-rage2 {
+    background-image: url("/static/emojis/rage2.png");
+}
+.emoji-rage3 {
+    background-image: url("/static/emojis/rage3.png");
+}
+.emoji-rage4 {
+    background-image: url("/static/emojis/rage4.png");
+}
+.emoji-rage {
+    background-image: url("/static/emojis/rage.png");
+}
+.emoji-railway_car {
+    background-image: url("/static/emojis/railway_car.png");
+}
+.emoji-rainbow {
+    background-image: url("/static/emojis/rainbow.png");
+}
+.emoji-raised_hand {
+    background-image: url("/static/emojis/raised_hand.png");
+}
+.emoji-raised_hands {
+    background-image: url("/static/emojis/raised_hands.png");
+}
+.emoji-raising_hand {
+    background-image: url("/static/emojis/raising_hand.png");
+}
+.emoji-ramen {
+    background-image: url("/static/emojis/ramen.png");
+}
+.emoji-ram {
+    background-image: url("/static/emojis/ram.png");
+}
+.emoji-rat {
+    background-image: url("/static/emojis/rat.png");
+}
+.emoji-recycle {
+    background-image: url("/static/emojis/recycle.png");
+}
+.emoji-red_car {
+    background-image: url("/static/emojis/red_car.png");
+}
+.emoji-red_circle {
+    background-image: url("/static/emojis/red_circle.png");
+}
+.emoji-registered {
+    background-image: url("/static/emojis/registered.png");
+}
+.emoji-relaxed {
+    background-image: url("/static/emojis/relaxed.png");
+}
+.emoji-relieved {
+    background-image: url("/static/emojis/relieved.png");
+}
+.emoji-repeat_one {
+    background-image: url("/static/emojis/repeat_one.png");
+}
+.emoji-repeat {
+    background-image: url("/static/emojis/repeat.png");
+}
+.emoji-restroom {
+    background-image: url("/static/emojis/restroom.png");
+}
+.emoji-revolving_hearts {
+    background-image: url("/static/emojis/revolving_hearts.png");
+}
+.emoji-rewind {
+    background-image: url("/static/emojis/rewind.png");
+}
+.emoji-ribbon {
+    background-image: url("/static/emojis/ribbon.png");
+}
+.emoji-rice_ball {
+    background-image: url("/static/emojis/rice_ball.png");
+}
+.emoji-rice_cracker {
+    background-image: url("/static/emojis/rice_cracker.png");
+}
+.emoji-rice {
+    background-image: url("/static/emojis/rice.png");
+}
+.emoji-rice_scene {
+    background-image: url("/static/emojis/rice_scene.png");
+}
+.emoji-ring {
+    background-image: url("/static/emojis/ring.png");
+}
+.emoji-rocket {
+    background-image: url("/static/emojis/rocket.png");
+}
+.emoji-roller_coaster {
+    background-image: url("/static/emojis/roller_coaster.png");
+}
+.emoji-rooster {
+    background-image: url("/static/emojis/rooster.png");
+}
+.emoji-rose {
+    background-image: url("/static/emojis/rose.png");
+}
+.emoji-rotating_light {
+    background-image: url("/static/emojis/rotating_light.png");
+}
+.emoji-round_pushpin {
+    background-image: url("/static/emojis/round_pushpin.png");
+}
+.emoji-rowboat {
+    background-image: url("/static/emojis/rowboat.png");
+}
+.emoji-rugby_football {
+    background-image: url("/static/emojis/rugby_football.png");
+}
+.emoji-runner {
+    background-image: url("/static/emojis/runner.png");
+}
+.emoji-running {
+    background-image: url("/static/emojis/running.png");
+}
+.emoji-running_shirt_with_sash {
+    background-image: url("/static/emojis/running_shirt_with_sash.png");
+}
+.emoji-ru {
+    background-image: url("/static/emojis/ru.png");
+}
+.emoji-sagittarius {
+    background-image: url("/static/emojis/sagittarius.png");
+}
+.emoji-sailboat {
+    background-image: url("/static/emojis/sailboat.png");
+}
+.emoji-sake {
+    background-image: url("/static/emojis/sake.png");
+}
+.emoji-sandal {
+    background-image: url("/static/emojis/sandal.png");
+}
+.emoji-santa {
+    background-image: url("/static/emojis/santa.png");
+}
+.emoji-sa {
+    background-image: url("/static/emojis/sa.png");
+}
+.emoji-satellite {
+    background-image: url("/static/emojis/satellite.png");
+}
+.emoji-satisfied {
+    background-image: url("/static/emojis/satisfied.png");
+}
+.emoji-saxophone {
+    background-image: url("/static/emojis/saxophone.png");
+}
+.emoji-school {
+    background-image: url("/static/emojis/school.png");
+}
+.emoji-school_satchel {
+    background-image: url("/static/emojis/school_satchel.png");
+}
+.emoji-scissors {
+    background-image: url("/static/emojis/scissors.png");
+}
+.emoji-scorpius {
+    background-image: url("/static/emojis/scorpius.png");
+}
+.emoji-scream_cat {
+    background-image: url("/static/emojis/scream_cat.png");
+}
+.emoji-scream {
+    background-image: url("/static/emojis/scream.png");
+}
+.emoji-scroll {
+    background-image: url("/static/emojis/scroll.png");
+}
+.emoji-seat {
+    background-image: url("/static/emojis/seat.png");
+}
+.emoji-secret {
+    background-image: url("/static/emojis/secret.png");
+}
+.emoji-seedling {
+    background-image: url("/static/emojis/seedling.png");
+}
+.emoji-see_no_evil {
+    background-image: url("/static/emojis/see_no_evil.png");
+}
+.emoji-seven {
+    background-image: url("/static/emojis/seven.png");
+}
+.emoji-shaved_ice {
+    background-image: url("/static/emojis/shaved_ice.png");
+}
+.emoji-sheep {
+    background-image: url("/static/emojis/sheep.png");
+}
+.emoji-shell {
+    background-image: url("/static/emojis/shell.png");
+}
+.emoji-shipit {
+    background-image: url("/static/emojis/shipit.png");
+}
+.emoji-ship {
+    background-image: url("/static/emojis/ship.png");
+}
+.emoji-shirt {
+    background-image: url("/static/emojis/shirt.png");
+}
+.emoji-shit {
+    background-image: url("/static/emojis/shit.png");
+}
+.emoji-shoe {
+    background-image: url("/static/emojis/shoe.png");
+}
+.emoji-shower {
+    background-image: url("/static/emojis/shower.png");
+}
+.emoji-signal_strength {
+    background-image: url("/static/emojis/signal_strength.png");
+}
+.emoji-six {
+    background-image: url("/static/emojis/six.png");
+}
+.emoji-six_pointed_star {
+    background-image: url("/static/emojis/six_pointed_star.png");
+}
+.emoji-ski {
+    background-image: url("/static/emojis/ski.png");
+}
+.emoji-skull {
+    background-image: url("/static/emojis/skull.png");
+}
+.emoji-sleeping {
+    background-image: url("/static/emojis/sleeping.png");
+}
+.emoji-sleepy {
+    background-image: url("/static/emojis/sleepy.png");
+}
+.emoji-slot_machine {
+    background-image: url("/static/emojis/slot_machine.png");
+}
+.emoji-small_blue_diamond {
+    background-image: url("/static/emojis/small_blue_diamond.png");
+}
+.emoji-small_orange_diamond {
+    background-image: url("/static/emojis/small_orange_diamond.png");
+}
+.emoji-small_red_triangle_down {
+    background-image: url("/static/emojis/small_red_triangle_down.png");
+}
+.emoji-small_red_triangle {
+    background-image: url("/static/emojis/small_red_triangle.png");
+}
+.emoji-smile_cat {
+    background-image: url("/static/emojis/smile_cat.png");
+}
+.emoji-smile {
+    background-image: url("/static/emojis/smile.png");
+}
+.emoji-smiley_cat {
+    background-image: url("/static/emojis/smiley_cat.png");
+}
+.emoji-smiley {
+    background-image: url("/static/emojis/smiley.png");
+}
+.emoji-smiling_imp {
+    background-image: url("/static/emojis/smiling_imp.png");
+}
+.emoji-smirk_cat {
+    background-image: url("/static/emojis/smirk_cat.png");
+}
+.emoji-smirk {
+    background-image: url("/static/emojis/smirk.png");
+}
+.emoji-smoking {
+    background-image: url("/static/emojis/smoking.png");
+}
+.emoji-snail {
+    background-image: url("/static/emojis/snail.png");
+}
+.emoji-snake {
+    background-image: url("/static/emojis/snake.png");
+}
+.emoji-snowboarder {
+    background-image: url("/static/emojis/snowboarder.png");
+}
+.emoji-snowflake {
+    background-image: url("/static/emojis/snowflake.png");
+}
+.emoji-snowman {
+    background-image: url("/static/emojis/snowman.png");
+}
+.emoji-sob {
+    background-image: url("/static/emojis/sob.png");
+}
+.emoji-soccer {
+    background-image: url("/static/emojis/soccer.png");
+}
+.emoji-soon {
+    background-image: url("/static/emojis/soon.png");
+}
+.emoji-sos {
+    background-image: url("/static/emojis/sos.png");
+}
+.emoji-sound {
+    background-image: url("/static/emojis/sound.png");
+}
+.emoji-space_invader {
+    background-image: url("/static/emojis/space_invader.png");
+}
+.emoji-spades {
+    background-image: url("/static/emojis/spades.png");
+}
+.emoji-spaghetti {
+    background-image: url("/static/emojis/spaghetti.png");
+}
+.emoji-sparkle {
+    background-image: url("/static/emojis/sparkle.png");
+}
+.emoji-sparkler {
+    background-image: url("/static/emojis/sparkler.png");
+}
+.emoji-sparkles {
+    background-image: url("/static/emojis/sparkles.png");
+}
+.emoji-sparkling_heart {
+    background-image: url("/static/emojis/sparkling_heart.png");
+}
+.emoji-speaker {
+    background-image: url("/static/emojis/speaker.png");
+}
+.emoji-speak_no_evil {
+    background-image: url("/static/emojis/speak_no_evil.png");
+}
+.emoji-speech_balloon {
+    background-image: url("/static/emojis/speech_balloon.png");
+}
+.emoji-speedboat {
+    background-image: url("/static/emojis/speedboat.png");
+}
+.emoji-squirrel {
+    background-image: url("/static/emojis/squirrel.png");
+}
+.emoji-star2 {
+    background-image: url("/static/emojis/star2.png");
+}
+.emoji-star {
+    background-image: url("/static/emojis/star.png");
+}
+.emoji-stars {
+    background-image: url("/static/emojis/stars.png");
+}
+.emoji-station {
+    background-image: url("/static/emojis/station.png");
+}
+.emoji-statue_of_liberty {
+    background-image: url("/static/emojis/statue_of_liberty.png");
+}
+.emoji-steam_locomotive {
+    background-image: url("/static/emojis/steam_locomotive.png");
+}
+.emoji-stew {
+    background-image: url("/static/emojis/stew.png");
+}
+.emoji-straight_ruler {
+    background-image: url("/static/emojis/straight_ruler.png");
+}
+.emoji-strawberry {
+    background-image: url("/static/emojis/strawberry.png");
+}
+.emoji-stuck_out_tongue_closed_eyes {
+    background-image: url("/static/emojis/stuck_out_tongue_closed_eyes.png");
+}
+.emoji-stuck_out_tongue {
+    background-image: url("/static/emojis/stuck_out_tongue.png");
+}
+.emoji-stuck_out_tongue_winking_eye {
+    background-image: url("/static/emojis/stuck_out_tongue_winking_eye.png");
+}
+.emoji-sunflower {
+    background-image: url("/static/emojis/sunflower.png");
+}
+.emoji-sunglasses {
+    background-image: url("/static/emojis/sunglasses.png");
+}
+.emoji-sunny {
+    background-image: url("/static/emojis/sunny.png");
+}
+.emoji-sunrise_over_mountains {
+    background-image: url("/static/emojis/sunrise_over_mountains.png");
+}
+.emoji-sunrise {
+    background-image: url("/static/emojis/sunrise.png");
+}
+.emoji-sun_with_face {
+    background-image: url("/static/emojis/sun_with_face.png");
+}
+.emoji-surfer {
+    background-image: url("/static/emojis/surfer.png");
+}
+.emoji-sushi {
+    background-image: url("/static/emojis/sushi.png");
+}
+.emoji-suspect {
+    background-image: url("/static/emojis/suspect.png");
+}
+.emoji-suspension_railway {
+    background-image: url("/static/emojis/suspension_railway.png");
+}
+.emoji-sweat_drops {
+    background-image: url("/static/emojis/sweat_drops.png");
+}
+.emoji-sweat {
+    background-image: url("/static/emojis/sweat.png");
+}
+.emoji-sweat_smile {
+    background-image: url("/static/emojis/sweat_smile.png");
+}
+.emoji-sweet_potato {
+    background-image: url("/static/emojis/sweet_potato.png");
+}
+.emoji-swimmer {
+    background-image: url("/static/emojis/swimmer.png");
+}
+.emoji-symbols {
+    background-image: url("/static/emojis/symbols.png");
+}
+.emoji-syringe {
+    background-image: url("/static/emojis/syringe.png");
+}
+.emoji-tada {
+    background-image: url("/static/emojis/tada.png");
+}
+.emoji-tanabata_tree {
+    background-image: url("/static/emojis/tanabata_tree.png");
+}
+.emoji-tangerine {
+    background-image: url("/static/emojis/tangerine.png");
+}
+.emoji-taurus {
+    background-image: url("/static/emojis/taurus.png");
+}
+.emoji-taxi {
+    background-image: url("/static/emojis/taxi.png");
+}
+.emoji-tea {
+    background-image: url("/static/emojis/tea.png");
+}
+.emoji-telephone {
+    background-image: url("/static/emojis/telephone.png");
+}
+.emoji-telephone_receiver {
+    background-image: url("/static/emojis/telephone_receiver.png");
+}
+.emoji-telescope {
+    background-image: url("/static/emojis/telescope.png");
+}
+.emoji-tennis {
+    background-image: url("/static/emojis/tennis.png");
+}
+.emoji-tent {
+    background-image: url("/static/emojis/tent.png");
+}
+.emoji-thought_balloon {
+    background-image: url("/static/emojis/thought_balloon.png");
+}
+.emoji-three {
+    background-image: url("/static/emojis/three.png");
+}
+.emoji-thumbsdown {
+    background-image: url("/static/emojis/thumbsdown.png");
+}
+.emoji-thumbsup {
+    background-image: url("/static/emojis/thumbsup.png");
+}
+.emoji-ticket {
+    background-image: url("/static/emojis/ticket.png");
+}
+.emoji-tiger2 {
+    background-image: url("/static/emojis/tiger2.png");
+}
+.emoji-tiger {
+    background-image: url("/static/emojis/tiger.png");
+}
+.emoji-tired_face {
+    background-image: url("/static/emojis/tired_face.png");
+}
+.emoji-tm {
+    background-image: url("/static/emojis/tm.png");
+}
+.emoji-toilet {
+    background-image: url("/static/emojis/toilet.png");
+}
+.emoji-tokyo_tower {
+    background-image: url("/static/emojis/tokyo_tower.png");
+}
+.emoji-tomato {
+    background-image: url("/static/emojis/tomato.png");
+}
+.emoji-tongue {
+    background-image: url("/static/emojis/tongue.png");
+}
+.emoji-tophat {
+    background-image: url("/static/emojis/tophat.png");
+}
+.emoji-top {
+    background-image: url("/static/emojis/top.png");
+}
+.emoji-tractor {
+    background-image: url("/static/emojis/tractor.png");
+}
+.emoji-traffic_light {
+    background-image: url("/static/emojis/traffic_light.png");
+}
+.emoji-train2 {
+    background-image: url("/static/emojis/train2.png");
+}
+.emoji-train {
+    background-image: url("/static/emojis/train.png");
+}
+.emoji-tram {
+    background-image: url("/static/emojis/tram.png");
+}
+.emoji-triangular_flag_on_post {
+    background-image: url("/static/emojis/triangular_flag_on_post.png");
+}
+.emoji-triangular_ruler {
+    background-image: url("/static/emojis/triangular_ruler.png");
+}
+.emoji-trident {
+    background-image: url("/static/emojis/trident.png");
+}
+.emoji-triumph {
+    background-image: url("/static/emojis/triumph.png");
+}
+.emoji-trolleybus {
+    background-image: url("/static/emojis/trolleybus.png");
+}
+.emoji-trollface {
+    background-image: url("/static/emojis/trollface.png");
+}
+.emoji-trophy {
+    background-image: url("/static/emojis/trophy.png");
+}
+.emoji-tropical_drink {
+    background-image: url("/static/emojis/tropical_drink.png");
+}
+.emoji-tropical_fish {
+    background-image: url("/static/emojis/tropical_fish.png");
+}
+.emoji-truck {
+    background-image: url("/static/emojis/truck.png");
+}
+.emoji-trumpet {
+    background-image: url("/static/emojis/trumpet.png");
+}
+.emoji-tshirt {
+    background-image: url("/static/emojis/tshirt.png");
+}
+.emoji-tulip {
+    background-image: url("/static/emojis/tulip.png");
+}
+.emoji-turtle {
+    background-image: url("/static/emojis/turtle.png");
+}
+.emoji-tv {
+    background-image: url("/static/emojis/tv.png");
+}
+.emoji-twisted_rightwards_arrows {
+    background-image: url("/static/emojis/twisted_rightwards_arrows.png");
+}
+.emoji-two_hearts {
+    background-image: url("/static/emojis/two_hearts.png");
+}
+.emoji-two_men_holding_hands {
+    background-image: url("/static/emojis/two_men_holding_hands.png");
+}
+.emoji-two {
+    background-image: url("/static/emojis/two.png");
+}
+.emoji-two_women_holding_hands {
+    background-image: url("/static/emojis/two_women_holding_hands.png");
+}
+.emoji-u5272 {
+    background-image: url("/static/emojis/u5272.png");
+}
+.emoji-u5408 {
+    background-image: url("/static/emojis/u5408.png");
+}
+.emoji-u55b6 {
+    background-image: url("/static/emojis/u55b6.png");
+}
+.emoji-u6307 {
+    background-image: url("/static/emojis/u6307.png");
+}
+.emoji-u6708 {
+    background-image: url("/static/emojis/u6708.png");
+}
+.emoji-u6709 {
+    background-image: url("/static/emojis/u6709.png");
+}
+.emoji-u6e80 {
+    background-image: url("/static/emojis/u6e80.png");
+}
+.emoji-u7121 {
+    background-image: url("/static/emojis/u7121.png");
+}
+.emoji-u7533 {
+    background-image: url("/static/emojis/u7533.png");
+}
+.emoji-u7981 {
+    background-image: url("/static/emojis/u7981.png");
+}
+.emoji-u7a7a {
+    background-image: url("/static/emojis/u7a7a.png");
+}
+.emoji-uk {
+    background-image: url("/static/emojis/uk.png");
+}
+.emoji-umbrella {
+    background-image: url("/static/emojis/umbrella.png");
+}
+.emoji-unamused {
+    background-image: url("/static/emojis/unamused.png");
+}
+.emoji-underage {
+    background-image: url("/static/emojis/underage.png");
+}
+.emoji-unlock {
+    background-image: url("/static/emojis/unlock.png");
+}
+.emoji-up {
+    background-image: url("/static/emojis/up.png");
+}
+.emoji-us {
+    background-image: url("/static/emojis/us.png");
+}
+.emoji-vertical_traffic_light {
+    background-image: url("/static/emojis/vertical_traffic_light.png");
+}
+.emoji-vhs {
+    background-image: url("/static/emojis/vhs.png");
+}
+.emoji-vibration_mode {
+    background-image: url("/static/emojis/vibration_mode.png");
+}
+.emoji-video_camera {
+    background-image: url("/static/emojis/video_camera.png");
+}
+.emoji-video_game {
+    background-image: url("/static/emojis/video_game.png");
+}
+.emoji-violin {
+    background-image: url("/static/emojis/violin.png");
+}
+.emoji-virgo {
+    background-image: url("/static/emojis/virgo.png");
+}
+.emoji-volcano {
+    background-image: url("/static/emojis/volcano.png");
+}
+.emoji-v {
+    background-image: url("/static/emojis/v.png");
+}
+.emoji-vs {
+    background-image: url("/static/emojis/vs.png");
+}
+.emoji-walking {
+    background-image: url("/static/emojis/walking.png");
+}
+.emoji-waning_crescent_moon {
+    background-image: url("/static/emojis/waning_crescent_moon.png");
+}
+.emoji-waning_gibbous_moon {
+    background-image: url("/static/emojis/waning_gibbous_moon.png");
+}
+.emoji-warning {
+    background-image: url("/static/emojis/warning.png");
+}
+.emoji-watch {
+    background-image: url("/static/emojis/watch.png");
+}
+.emoji-water_buffalo {
+    background-image: url("/static/emojis/water_buffalo.png");
+}
+.emoji-watermelon {
+    background-image: url("/static/emojis/watermelon.png");
+}
+.emoji-wave {
+    background-image: url("/static/emojis/wave.png");
+}
+.emoji-wavy_dash {
+    background-image: url("/static/emojis/wavy_dash.png");
+}
+.emoji-waxing_crescent_moon {
+    background-image: url("/static/emojis/waxing_crescent_moon.png");
+}
+.emoji-waxing_gibbous_moon {
+    background-image: url("/static/emojis/waxing_gibbous_moon.png");
+}
+.emoji-wc {
+    background-image: url("/static/emojis/wc.png");
+}
+.emoji-weary {
+    background-image: url("/static/emojis/weary.png");
+}
+.emoji-wedding {
+    background-image: url("/static/emojis/wedding.png");
+}
+.emoji-whale2 {
+    background-image: url("/static/emojis/whale2.png");
+}
+.emoji-whale {
+    background-image: url("/static/emojis/whale.png");
+}
+.emoji-wheelchair {
+    background-image: url("/static/emojis/wheelchair.png");
+}
+.emoji-white_check_mark {
+    background-image: url("/static/emojis/white_check_mark.png");
+}
+.emoji-white_circle {
+    background-image: url("/static/emojis/white_circle.png");
+}
+.emoji-white_flower {
+    background-image: url("/static/emojis/white_flower.png");
+}
+.emoji-white_large_square {
+    background-image: url("/static/emojis/white_large_square.png");
+}
+.emoji-white_medium_small_square {
+    background-image: url("/static/emojis/white_medium_small_square.png");
+}
+.emoji-white_medium_square {
+    background-image: url("/static/emojis/white_medium_square.png");
+}
+.emoji-white_small_square {
+    background-image: url("/static/emojis/white_small_square.png");
+}
+.emoji-white_square_button {
+    background-image: url("/static/emojis/white_square_button.png");
+}
+.emoji-wind_chime {
+    background-image: url("/static/emojis/wind_chime.png");
+}
+.emoji-wine_glass {
+    background-image: url("/static/emojis/wine_glass.png");
+}
+.emoji-wink {
+    background-image: url("/static/emojis/wink.png");
+}
+.emoji-wolf {
+    background-image: url("/static/emojis/wolf.png");
+}
+.emoji-woman {
+    background-image: url("/static/emojis/woman.png");
+}
+.emoji-womans_clothes {
+    background-image: url("/static/emojis/womans_clothes.png");
+}
+.emoji-womans_hat {
+    background-image: url("/static/emojis/womans_hat.png");
+}
+.emoji-womens {
+    background-image: url("/static/emojis/womens.png");
+}
+.emoji-worried {
+    background-image: url("/static/emojis/worried.png");
+}
+.emoji-wrench {
+    background-image: url("/static/emojis/wrench.png");
+}
+.emoji-x {
+    background-image: url("/static/emojis/x.png");
+}
+.emoji-yellow_heart {
+    background-image: url("/static/emojis/yellow_heart.png");
+}
+.emoji-yen {
+    background-image: url("/static/emojis/yen.png");
+}
+.emoji-yum {
+    background-image: url("/static/emojis/yum.png");
+}
+.emoji-zap {
+    background-image: url("/static/emojis/zap.png");
+}
+.emoji-zero {
+    background-image: url("/static/emojis/zero.png");
+}
+.emoji-zzz {
+    background-image: url("/static/emojis/zzz.png");
+}
+.emoji- {
+    background-image: url("/static/emojis/.png");
+}
