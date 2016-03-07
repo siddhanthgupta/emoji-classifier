@@ -14,6 +14,11 @@ class WordGraph(object):
 
     thesaurus_filename = 'logic/en_thesaurus.dat'
     emotion_list = ['happy', 'sad', 'angry', 'confused']
+    emotion_parts_of_speech = {'happy':['happy','happiness'],
+                               'sad':['sad','sadness'],
+                               'angry':['angry','anger'],
+                               'confused':['confused','confusion']
+                               }
 
     def __init__(self):
         self.graph = {}
@@ -65,22 +70,28 @@ class WordGraph(object):
         stop = timeit.default_timer()
         print("Time taken for graph construction:", stop - start, "seconds")
 
-    def bfs(self, emotion, depth):
-        visited, queue = set(), [emotion]
-        visited.add(emotion)
-        self.dist[emotion][emotion] = 0
-        if(emotion not in self.graph):
+    def bfs(self, emotion, part, depth):
+        visited, queue = set(), [part]
+        visited.add(part)
+        self.dist[part][emotion] = 0
+        if(part not in self.graph):
             raise Exception(
-                'The emotion ' + emotion + ' is not in the thesaurus')
+                'The part '+ part + 'of emotion ' + emotion + ' is not in the thesaurus')
         while(len(queue) > 0):
             vertex = queue.pop(0)
             if(self.dist[vertex][emotion] < depth):
                 for neighbor in self.graph[vertex]:
                     if neighbor not in visited:
-                        self.dist[neighbor][emotion] = self.dist[
-                            vertex][emotion] + 1
+                        if(self.dist[neighbor][emotion] == -1):
+                            self.dist[neighbor][emotion] = self.dist[vertex][emotion] + 1
+                            queue.append(neighbor)
+                        else:
+                            if(self.dist[neighbor][emotion] > self.dist[vertex][emotion] + 1):
+                                self.dist[neighbor][emotion] = self.dist[vertex][emotion] + 1
+                                queue.append(neighbor)
+                                
                         visited.add(neighbor)
-                        queue.append(neighbor)
+                        
 
 
 #         Calculates distance at which we find the emotion
@@ -100,8 +111,9 @@ class WordGraph(object):
 
     def populate_dist(self, depth):
         for emotion in WordGraph.emotion_list:
-            print('Performing BFS for emotion',emotion)
-            self.bfs(emotion, depth)
+            for part in WordGraph.emotion_parts_of_speech[emotion]:
+                print('Performing BFS for emotion',emotion, 'part of speech =',part)
+                self.bfs(emotion, part, depth)
     
 
 # if __name__ == '__main__':
