@@ -57,8 +57,8 @@ class EmojiClassifier(object):
             calculator.compute()
             stop = timeit.default_timer()
             sum += (stop - start)
-            print("Computing value for emoticon", emoticon_filename,
-                  "time = ", stop - start, "s total =", sum, "s")
+#             print("Computing value for emoticon", emoticon_filename,
+#                   "time = ", stop - start, "s total =", sum, "s")
         return all_data_dicts
 
     def compute_list_uniqueness(self, list_emoticon_filename, overwrite_flag):

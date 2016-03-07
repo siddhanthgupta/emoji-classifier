@@ -30,7 +30,8 @@ def get_emoji_list(emotion):
     classes = set()
     for key, value in emoji_dicts.items():
         if('classification' in value):
-            classes.append(value['classification'])
+            classes.add(value['classification'])
+#             print(value['classification'])
     print(classes)
     return list_out
 
@@ -93,6 +94,7 @@ def emojiList():
     response_data = {}
     emoji_name = request.json['emotion']
     print('Sending list corresponding to emotion ' + (str)(emoji_name))
+#     emoji_list = get_temp_emoji_list(50)
     emoji_list = get_emoji_list(emoji_name)
 #     print("Sending list")
 #     print(emoji_list)
@@ -102,5 +104,5 @@ def emojiList():
 
 if __name__ == '__main__':
     setUp(10)
-    app.run(debug=False, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0')
 

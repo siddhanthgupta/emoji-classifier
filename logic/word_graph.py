@@ -64,7 +64,6 @@ class WordGraph(object):
     '''
 
     def calculate_emotion_depth(self, word, emotion, depth):
-#         print("Calculating depth for word=",word,"for emotion=",emotion,"within depth=",depth)
         count = 0
         visited, queue = set(), [word]
         if(word not in self.graph):
@@ -85,6 +84,7 @@ class WordGraph(object):
                         visited.add(each)
                         queue.append(each)
         return -1
+#         return random.randint(1,depth)
 
     def calculate_all_depth(self, word, depth):
         emotion_depths = {}
