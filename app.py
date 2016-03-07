@@ -7,7 +7,7 @@ from logic.emoji_classifier import EmojiClassifier
 from logic.data_handler import EmojiDAO
 
 app = Flask(__name__)
-classifier = EmojiClassifier()
+
 
 def get_temp_emoji_list(size):
     list_orig = []
@@ -31,12 +31,15 @@ def get_emoji_list(emotion):
     for key, value in emoji_dicts.items():
         if('classification' in value):
             classes.add(value['classification'])
+#             if(value['classification'] == 'miscellaneous'):
+#                 print(key,'is classified as miscellaneous')
 #             print(value['classification'])
     print(classes)
     return list_out
 
 def setUp(depth):
     list_orig = []
+    classifier = EmojiClassifier(depth)
     with open('logic/list.txt','r') as f:
         x = f.read().split('\n')
         for line in x:
@@ -96,8 +99,8 @@ def emojiList():
     print('Sending list corresponding to emotion ' + (str)(emoji_name))
 #     emoji_list = get_temp_emoji_list(50)
     emoji_list = get_emoji_list(emoji_name)
-#     print("Sending list")
-#     print(emoji_list)
+    print("Sending list")
+    print(emoji_list)
     response_data['list'] = emoji_list
     # print(response_data)
     return json.dumps(response_data)

@@ -67,9 +67,6 @@ $(function () {
 
     $(".emotion-tab").on("click", function () {
         var emotion = $(this).text().toLowerCase();
-        if(emotion.localeCompare("misc")==0) {
-            emotion = "miscellaneous";
-        }
         $("#initial-emoji-placeholder").text("Select an emoji to see classification");
         var emotionList = emotion + "-list";
         $.ajax({

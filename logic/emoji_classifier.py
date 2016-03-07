@@ -15,12 +15,13 @@ class EmojiClassifier(object):
     classdocs
     '''
 
-    def __init__(self):
+    def __init__(self, depth):
         '''
         Constructor
         '''
         self.wordgraph = WordGraph()
         self.wordgraph.make_graph()
+        self.wordgraph.populate_dist(depth)
         self.dao = EmojiDAO()
 
     def depth_to_score(self, depth, depth_limit):
@@ -47,18 +48,12 @@ class EmojiClassifier(object):
 
     def compute_emoticons(self, list_emoticon_filename, depth):
         all_data_dicts = {}
-        sum = 0
         for emoticon_filename in list_emoticon_filename:
             emoticon_name = self.filename_to_name(emoticon_filename)
-            start = timeit.default_timer()
             all_data_dicts[emoticon_filename] = self.compute_emoticon(
                 emoticon_name, depth)
             calculator = CalculatorUtility(all_data_dicts[emoticon_filename])
             calculator.compute()
-            stop = timeit.default_timer()
-            sum += (stop - start)
-#             print("Computing value for emoticon", emoticon_filename,
-#                   "time = ", stop - start, "s total =", sum, "s")
         return all_data_dicts
 
     def compute_list_uniqueness(self, list_emoticon_filename, overwrite_flag):
