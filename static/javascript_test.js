@@ -47,8 +47,12 @@ $(function () {
                     bigass_emoji.addClass(emoji_particular);
                     $("#classification-data").show();
                     $("#name").text(response_data["name"]);
-                    $("#classification").text("Classified as " +
-                    response_data["classification"] + " with " + response_data["accuracy"] + "% accuracy");
+                    if(response_data["classification"].toLowerCase().localeCompare("miscellaneous")==0) {
+                        $("#classification").text("Classified as " + response_data["classification"]);
+                    } else {
+                        $("#classification").text("Classified as " +
+                        response_data["classification"] + " with " + response_data["accuracy"] + "% certainty");
+                    }
                     data_radar["datasets"][0]["data"] = response_data["data"].slice();
                     var ctx = $("#accuracy-chart").get(0).getContext("2d");
                     var myRadarChart = new Chart(ctx).Radar(data_radar);
@@ -63,6 +67,9 @@ $(function () {
 
     $(".emotion-tab").on("click", function () {
         var emotion = $(this).text().toLowerCase();
+        if(emotion.localeCompare("misc")==0) {
+            emotion = "miscellaneous";
+        }
         $("#initial-emoji-placeholder").text("Select an emoji to see classification");
         var emotionList = emotion + "-list";
         $.ajax({

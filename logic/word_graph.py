@@ -4,13 +4,15 @@ Created on 06-Mar-2016
 @author: siddhanthgupta
 '''
 import timeit
+import random
+
 
 class WordGraph(object):
     '''
     classdocs
     '''
 
-    thesaurus_filename = 'en_thesaurus.dat'
+    thesaurus_filename = 'logic/en_thesaurus.dat'
     emotion_list = ['happy', 'sad', 'angry', 'confused']
 
     def __init__(self):
@@ -55,14 +57,42 @@ class WordGraph(object):
         stop = timeit.default_timer()
         print("Time taken for graph construction:", stop - start, "seconds")
 
-    def calculate_emotion_depth(self, emotion, depth):
-        pass
+    '''
+        Calculates distance at which we find the emotion
+        Returns -1 if the distance exceeds the max allowed distance as defined
+                    by "depth"
+    '''
 
-    def calculate_all_depth(self, depth):
+    def calculate_emotion_depth(self, word, emotion, depth):
+#         print("Calculating depth for word=",word,"for emotion=",emotion,"within depth=",depth)
+        count = 0
+        visited, queue = set(), [word]
+        if(word not in self.graph):
+            return -1
+        queue.append("!")
+        while(len(queue) > 1):
+            vertex = queue.pop(0)
+            if(count > depth):
+                return -1
+            elif(vertex == emotion):
+                return count
+            elif(vertex == "!"):
+                queue.append("!")
+                count = count + 1
+            else:
+                for each in self.graph[vertex]:
+                    if each not in visited:
+                        visited.add(each)
+                        queue.append(each)
+        return -1
+
+    def calculate_all_depth(self, word, depth):
         emotion_depths = {}
         for emotion in WordGraph.emotion_list:
-            emotion_depths[emotion] = self.calculate_emotion_depth(emotion, depth)
+            emotion_depths[emotion] = self.calculate_emotion_depth(
+                word, emotion, depth)
         return emotion_depths
+
 
 # if __name__ == '__main__':
 #     obj = WordGraph()

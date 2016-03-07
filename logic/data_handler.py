@@ -22,10 +22,10 @@ import os
 
 
 class EmojiDAO(object):
-    my_filename = "saved_data.pickle"
+    my_filename = "/tmp/saved_data.pickle"
 
     def retrieve_all_from_file(self):
-        if(os.path.isfile('./' + EmojiDAO.my_filename)):
+        if(os.path.isfile(EmojiDAO.my_filename)):
             file_dict = {}
             with open(EmojiDAO.my_filename, "rb") as f:
                 file_dict = pickle.load(f)
@@ -39,20 +39,18 @@ class EmojiDAO(object):
                 file_dict = pickle.load(f)
             for key, value in data_dict.items():
                 if(key in data_dict):
-                    print(
-                        "Warning: overwriting key " + key + ":" + (str)(value))
-                file_dict[key] = value
+                    print("Warning: overwriting key " + key + ":" + (str)(value))
+                    file_dict[key] = value
+            with open(EmojiDAO.my_filename, "wb") as f:
+                pickle.dump(file_dict, f)
+#             print('Loaded', len(file_dict), 'dicts into file')
         else:
             with open(EmojiDAO.my_filename, "wb") as f:
-                pickle.dump(data_dict, f,)
+                pickle.dump(data_dict, f)
+#             print('Loaded', len(data_dict), 'dicts into file')
 
     def retrieve_one_from_file(self, key):
-        if(os.path.isfile(EmojiDAO.my_filename)):
-            file_dict = {}
-            with open(EmojiDAO.my_filename, "rb") as f:
-                file_dict = pickle.load(f)
-            if(key in file_dict):
-                return file_dict['key']
-            else:
-                return None
+        file_dict = self.retrieve_all_from_file()
+        if(file_dict is not None and key in file_dict):
+            return file_dict[key]
         return None

@@ -4,19 +4,22 @@ Created on 06-Mar-2016
 @author: siddhanthgupta
 '''
 
+
 class CalculatorUtility(object):
     emotion_score_map = {
         'happy': 'happy_score',
         'sad': 'sad_score',
         'angry': 'angry_score',
-        'confused': 'confused_score'
+        'confused': 'confused_score',
+        'miscellaneous': None
     }
 
     score_emotion_map = {
         'happy_score': 'happy',
         'sad_score': 'sad',
         'angry_score': 'angry',
-        'confused_score': 'confused'
+        'confused_score': 'confused',
+        None: 'miscellaneous'
     }
 
     def __init__(self, value_dict):
@@ -38,12 +41,12 @@ class CalculatorUtility(object):
                 max_val = value
                 max_key = key
         self.value_dict[
-            "classification"] = CalculatorUtility.score_emotion_map[max_key]
+            'classification'] = CalculatorUtility.score_emotion_map[max_key]
 
     def compute_accuracy(self):
         if('classification' not in self.value_dict):
             raise Exception('Cannot compute accuracy without classification')
-        if(self.value_dict['classification'] is not None):
+        if(self.value_dict['classification'] != CalculatorUtility.score_emotion_map[None]):
             score_arr = self.get_score_array()
             sum_scores = sum(score_arr)
             classification_em_key = CalculatorUtility.emotion_score_map[
@@ -51,6 +54,8 @@ class CalculatorUtility(object):
             classification_score = self.value_dict[classification_em_key]
             accuracy = (classification_score / sum_scores) * 100.00
             self.value_dict['accuracy'] = accuracy
+        else:
+            self.value_dict['accuracy'] = 0
 
     def compute(self):
         self.compute_classification()
