@@ -62,7 +62,7 @@ class WordGraph(object):
 
             except ValueError:
                 raise ValueError(
-                    'The file is fucked up. Check it again. Line number ' + (str)(line_counter))
+                    'The file is incorrectly formatted. Check it again. Line number ' + (str)(line_counter))
             except EOFError:
                 print("EOF Reached")
                 break
@@ -89,9 +89,9 @@ class WordGraph(object):
                             if(self.dist[neighbor][emotion] > self.dist[vertex][emotion] + 1):
                                 self.dist[neighbor][emotion] = self.dist[vertex][emotion] + 1
                                 queue.append(neighbor)
-                                
+
                         visited.add(neighbor)
-                        
+
 
 
 #         Calculates distance at which we find the emotion
@@ -114,7 +114,7 @@ class WordGraph(object):
             for part in WordGraph.emotion_parts_of_speech[emotion]:
                 print('Performing BFS for emotion',emotion, 'part of speech =',part)
                 self.bfs(emotion, part, depth)
-    
+
 
 # if __name__ == '__main__':
 #     obj = WordGraph()

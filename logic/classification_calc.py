@@ -4,7 +4,6 @@ Created on 06-Mar-2016
 @author: siddhanthgupta
 '''
 
-
 class CalculatorUtility(object):
     emotion_score_map = {
         'happy': 'happy_score',

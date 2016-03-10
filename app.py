@@ -63,7 +63,7 @@ def emojiDetails():
     # At this point, we call the database and query against emoji_name for
     # the response_data parameters
     # For now, we use random values
-    
+
 #     emoji_dict = {}
 #     emoji_dict['emoji_name'] = emoji_name
 #     emoji_dict['happy_score'] = random.randint(1, 100)
@@ -72,7 +72,7 @@ def emojiDetails():
 #     emoji_dict['confused_score'] = random.randint(1, 100)
 #     emoji_dict['classification'] = 'happy'
 #     emoji_dict['accuracy'] = random.randint(1, 100)
-    
+
     dao = EmojiDAO()
 #     print("We received name as", emoji_name)
     emoji_dict = dao.retrieve_one_from_file(emoji_name.split('-',1)[1])
@@ -83,7 +83,7 @@ def emojiDetails():
     score_arr.append(emoji_dict["sad_score"])
     score_arr.append(emoji_dict["angry_score"])
     score_arr.append(emoji_dict["confused_score"])
-    
+
     response_data['data'] = score_arr
     response_data['name'] = emoji_dict['emoji_name'].title()
     response_data['classification'] = emoji_dict['classification'].title()
@@ -108,4 +108,3 @@ def emojiList():
 if __name__ == '__main__':
     setUp(10)
     app.run(debug=True, host='0.0.0.0')
-
