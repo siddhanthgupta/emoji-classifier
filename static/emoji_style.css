@@ -10,14 +10,14 @@
     cursor: pointer;
 }
 .big-emoji {
-    height: 15em;
-    width: 15em;
+    height: 10em;
+    width: 10em;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
     vertical-align: middle;
-    margin-left: 30%;
+    margin-left: 37%;
     margin-top: 5%;
 }
 #classification-data{
@@ -25,7 +25,7 @@
 }
 body {
     padding-top: 65px;
-    padding-bottom: 65px;
+    padding-bottom: 35px;
     /*background-color: #282C34;*/
 }
 .row-centered {
