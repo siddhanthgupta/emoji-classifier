@@ -11,13 +11,14 @@ app = Flask(__name__)
 
 def get_temp_emoji_list(size):
     list_orig = []
-    with open('logic/list.txt','r') as f:
+    with open('logic/list.txt', 'r') as f:
         x = f.read().split('\n')
         for line in x:
             if(len(line) >= 4):
                 list_orig.append(line[:-4])
     random.shuffle(list_orig)
     return list_orig[:size]
+
 
 def get_emoji_list(emotion):
     dao = EmojiDAO()
@@ -37,10 +38,11 @@ def get_emoji_list(emotion):
     print(classes)
     return list_out
 
+
 def setUp(depth):
     list_orig = []
     classifier = EmojiClassifier(depth)
-    with open('logic/list.txt','r') as f:
+    with open('logic/list.txt', 'r') as f:
         x = f.read().split('\n')
         for line in x:
             if(len(line) >= 4):
@@ -49,11 +51,13 @@ def setUp(depth):
 #     print("Displaying Keys")
 #     for key, value in all_emoji_data.items():
 #         print(key)
-    print('The number of new keys are ',len(all_emoji_data))
+    print('The number of new keys are ', len(all_emoji_data))
+
 
 @app.route('/')
 def index():
     return render_template('index.html')
+
 
 @app.route('/emojiDetails', methods=['POST'])
 def emojiDetails():
@@ -75,9 +79,9 @@ def emojiDetails():
 
     dao = EmojiDAO()
 #     print("We received name as", emoji_name)
-    emoji_dict = dao.retrieve_one_from_file(emoji_name.split('-',1)[1])
+    emoji_dict = dao.retrieve_one_from_file(emoji_name.split('-', 1)[1])
 #     print('We retrieve emoji from database with name',emoji_name.split('-',1)[1])
-    print('Retrieved emoji is',emoji_dict)
+    print('Retrieved emoji is', emoji_dict)
     score_arr = []
     score_arr.append(emoji_dict["happy_score"])
     score_arr.append(emoji_dict["sad_score"])
@@ -91,6 +95,7 @@ def emojiDetails():
 
     print('Return data' + (str)(json.dumps(response_data)))
     return json.dumps(response_data)
+
 
 @app.route('/emojiList', methods=['POST'])
 def emojiList():
