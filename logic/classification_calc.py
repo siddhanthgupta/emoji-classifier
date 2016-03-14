@@ -4,7 +4,12 @@ Created on 06-Mar-2016
 @author: siddhanthgupta
 '''
 
+
 class CalculatorUtility(object):
+    '''
+        Contains utility functions used to classify an emoticon to a particular
+        emotion, and calculate accuracy of classification
+    '''
     emotion_score_map = {
         'happy': 'happy_score',
         'sad': 'sad_score',
@@ -22,9 +27,16 @@ class CalculatorUtility(object):
     }
 
     def __init__(self, value_dict):
+        '''
+            Accepts the value dictionary corresponding to a emoticon-filename key
+        '''
         self.value_dict = value_dict
 
     def get_score_array(self):
+        '''
+            Returns the happy, sad, angry and confused score in the value_dict
+            as an array
+        '''
         score_arr = []
         score_arr.append(self.value_dict["happy_score"])
         score_arr.append(self.value_dict["sad_score"])
@@ -33,6 +45,11 @@ class CalculatorUtility(object):
         return score_arr
 
     def compute_classification(self):
+        '''
+            Classifies the emoticon to the emotion having highest score
+
+            In case all scores are 0, then emoticon classification value is None
+        '''
         max_val = 0
         max_key = None
         for key, value in self.value_dict.items():
@@ -43,6 +60,12 @@ class CalculatorUtility(object):
             'classification'] = CalculatorUtility.score_emotion_map[max_key]
 
     def compute_accuracy(self):
+        '''
+            Computes the classification accuracy as:
+             accuracy = score of the classified emotion / sum of all scores * 100
+
+            Accuracy is undefined for the value_dict if classification is None
+        '''
         if('classification' not in self.value_dict):
             raise Exception('Cannot compute accuracy without classification')
         if(self.value_dict['classification'] != CalculatorUtility.score_emotion_map[None]):
@@ -57,5 +80,8 @@ class CalculatorUtility(object):
             self.value_dict['accuracy'] = 0
 
     def compute(self):
+        '''
+            Computes the classification of the emoticon and the accuracy
+        '''
         self.compute_classification()
         self.compute_accuracy()
