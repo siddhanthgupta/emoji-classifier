@@ -21,6 +21,8 @@ class EmojiClassifier(object):
         '''
         self.wordgraph = WordGraph()
         self.wordgraph.make_graph()
+        self.wordgraph.populate_emotion_alternatives()
+        print(self.wordgraph.emotion_parts_of_speech)
         self.wordgraph.populate_dist(depth)
         self.dao = EmojiDAO()
 
@@ -47,13 +49,17 @@ class EmojiClassifier(object):
         depth_map = self.wordgraph.calculate_all_depth(emoticon)
         emoji_dict = {}
         emoji_dict['emoji_name'] = emoticon
-        emoji_dict['happy_score'] = self.depth_to_score(
-            depth_map['happy'], depth)
-        emoji_dict['sad_score'] = self.depth_to_score(depth_map['sad'], depth)
-        emoji_dict['angry_score'] = self.depth_to_score(
-            depth_map['angry'], depth)
-        emoji_dict['confused_score'] = self.depth_to_score(
-            depth_map['confused'], depth)
+#         emoji_dict['happy_score'] = self.depth_to_score(
+#             depth_map['happy'], depth)
+#         emoji_dict['sad_score'] = self.depth_to_score(depth_map['sad'], depth)
+#         emoji_dict['angry_score'] = self.depth_to_score(
+#             depth_map['angry'], depth)
+#         emoji_dict['confused_score'] = self.depth_to_score(
+#             depth_map['confused'], depth)
+        for score_name, emotion_name in CalculatorUtility.score_emotion_map.items():
+            if(score_name is not None):
+                emoji_dict[score_name] = self.depth_to_score(
+                    depth_map[emotion_name], depth)
         return emoji_dict
 
     def compute_emoticons(self, list_emoticon_filename, depth):

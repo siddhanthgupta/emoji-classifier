@@ -14,11 +14,13 @@ class WordGraph(object):
     '''
 
     thesaurus_filename = 'logic/en_thesaurus.dat'
-    emotion_list = ['happy', 'sad', 'angry', 'confused']
-    emotion_parts_of_speech = {'happy': ['happy', 'happiness'],
-                               'sad': ['sad', 'sadness'],
-                               'angry': ['angry', 'anger'],
-                               'confused': ['confused', 'confusion']
+    emotion_list = ['happy', 'sad', 'angry', 'confused', 'fear', 'disgust']
+    emotion_parts_of_speech = {'happy': set(['happy', 'happiness']),
+                               'sad': set(['sad', 'sadness']),
+                               'angry': set(['angry', 'anger']),
+                               'confused': set(['confused', 'confusion']),
+                               'fear': set(['fear', 'scared']),
+                               'disgust': set(['disgust', 'disgusted'])
                                }
 
     def __init__(self):
@@ -139,6 +141,25 @@ class WordGraph(object):
                 print('Performing BFS for emotion',
                       emotion, 'part of speech =', part)
                 self.bfs(emotion, part, depth)
+
+    def populate_emotion_alternatives(self):
+        emotion_file_map = {
+            'happy': 'joy.txt',
+            'sad': 'sadness.txt',
+            'angry': 'anger.txt',
+            'confused': 'surprise.txt',
+            'fear': 'fear.txt',
+            'disgust': 'disgust.txt'
+        }
+        for emotion, file in emotion_file_map.items():
+            with open('logic/' + file, 'r') as f:
+                file_content = f.readlines()
+            for line in file_content:
+                line_list = line.split()
+                for word in line_list[1:]:
+                    if(word in self.graph):
+                        WordGraph.emotion_parts_of_speech[
+                            emotion].add(word.lower())
 
 
 # if __name__ == '__main__':

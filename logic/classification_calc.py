@@ -15,6 +15,8 @@ class CalculatorUtility(object):
         'sad': 'sad_score',
         'angry': 'angry_score',
         'confused': 'confused_score',
+        'fear': 'fear_score',
+        'disgust': 'disgust_score',
         'miscellaneous': None
     }
 
@@ -23,6 +25,8 @@ class CalculatorUtility(object):
         'sad_score': 'sad',
         'angry_score': 'angry',
         'confused_score': 'confused',
+        'fear_score': 'fear',
+        'disgust_score': 'disgust',
         None: 'miscellaneous'
     }
 
@@ -38,10 +42,9 @@ class CalculatorUtility(object):
             as an array
         '''
         score_arr = []
-        score_arr.append(self.value_dict["happy_score"])
-        score_arr.append(self.value_dict["sad_score"])
-        score_arr.append(self.value_dict["angry_score"])
-        score_arr.append(self.value_dict["confused_score"])
+        for score_name in CalculatorUtility.score_emotion_map.keys():
+            if(score_name is not None):
+                score_arr.append(self.value_dict[score_name])
         return score_arr
 
     def compute_classification(self):

@@ -49,7 +49,34 @@ body {
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
-.emoji-100 {
+div#text {
+    margin-top:48px;
+    text-align:center;
+}
+div#dropzone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: visibility 175ms, opacity 175ms;
+    display: table;
+    text-shadow: 1px 1px 2px #000;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.45);
+    font: bold 42px Oswald, DejaVu Sans, Tahoma, sans-serif;
+    border-style: dashed;
+}
+div#textnode {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    transition: font-size 175ms;
+    font-family: 'Roboto', sans-serif;
+}
+/*.emoji-100 {
     background-image: url("/static/emojis/100.png");
 }
 .emoji-1234 {
@@ -2694,4 +2721,4 @@ body {
 }
 .emoji- {
     background-image: url("/static/emojis/.png");
-}
+}*/

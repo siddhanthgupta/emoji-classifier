@@ -1,12 +1,24 @@
-#!/usr/bin/python3
 from flask import Flask, render_template, request
 import json
-import random
 import os
-from logic.emoji_classifier import EmojiClassifier
+import os.path
+import random
+from werkzeug import secure_filename
+
+from logic.classification_calc import CalculatorUtility
 from logic.data_handler import EmojiDAO
+from logic.emoji_classifier import EmojiClassifier
+from logic.file_sync import ThreadFileSync
+
 
 app = Flask(__name__)
+UPLOAD_FOLDER = 'static/emojis'
+ALLOWED_EXTENSIONS = set(['png'])
+
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 
 def get_temp_emoji_list(size):
@@ -28,29 +40,31 @@ def get_emoji_list(emotion):
     for key, value in emoji_dicts.items():
         if('classification' in value and value['classification'].lower() == emotion.lower()):
             list_out.append(key)
-    classes = set()
-    for key, value in emoji_dicts.items():
-        if('classification' in value):
-            classes.add(value['classification'])
-#             if(value['classification'] == 'miscellaneous'):
-#                 print(key,'is classified as miscellaneous')
-#             print(value['classification'])
-    print(classes)
-    return list_out
+#     classes = set()
+#     for key, value in emoji_dicts.items():
+#         if('classification' in value):
+#             classes.add(value['classification'])
+# #             if(value['classification'] == 'miscellaneous'):
+# #                 print(key,'is classified as miscellaneous')
+# #             print(value['classification'])
+#     print(classes)
+    list_sorted = sorted(
+        list_out, key=lambda k: emoji_dicts[k]['accuracy'], reverse=True)
+    return list_sorted
 
 
 def setUp(depth):
     list_orig = []
     classifier = EmojiClassifier(depth)
-    with open('logic/list.txt', 'r') as f:
-        x = f.read().split('\n')
-        for line in x:
-            if(len(line) >= 4):
-                list_orig.append(line[:-4])
+    for f in os.listdir('static/emojis'):
+        if(os.path.isfile(os.path.join('static/emojis', f))):
+            if(len(f) >= 4):
+                list_orig.append(f[:-4])
     all_emoji_data = classifier.compute_and_store(list_orig, depth)
 #     print("Displaying Keys")
 #     for key, value in all_emoji_data.items():
 #         print(key)
+    file_sync = ThreadFileSync(classifier, depth)
     print('The number of new keys are ', len(all_emoji_data))
 
 
@@ -79,14 +93,14 @@ def emojiDetails():
 
     dao = EmojiDAO()
 #     print("We received name as", emoji_name)
-    emoji_dict = dao.retrieve_one_from_file(emoji_name.split('-', 1)[1])
+    emoji_dict = dao.retrieve_one_from_file(emoji_name)
 #     print('We retrieve emoji from database with name',emoji_name.split('-',1)[1])
     print('Retrieved emoji is', emoji_dict)
     score_arr = []
-    score_arr.append(emoji_dict["happy_score"])
-    score_arr.append(emoji_dict["sad_score"])
-    score_arr.append(emoji_dict["angry_score"])
-    score_arr.append(emoji_dict["confused_score"])
+    emotion_list = ["Happy", "Sad", "Angry", "Confused", "Fear", "Disgust"]
+    for emotion in emotion_list:
+        score_arr.append(
+            emoji_dict[CalculatorUtility.emotion_score_map[emotion.lower()]])
 
     response_data['data'] = score_arr
     response_data['name'] = emoji_dict['emoji_name'].title()
@@ -110,6 +124,25 @@ def emojiList():
     # print(response_data)
     return json.dumps(response_data)
 
+
+@app.route('/upload', methods=['POST'])
+def uploadEmoji():
+    response_data = {}
+    print(request.files)
+    file = request.files['emoticon_file']
+    if not file:
+        response_data['error'] = 'File not found in reqeust object'
+        return json.dumps(response_data)
+    if allowed_file(file.filename):
+        print(file.filename)
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(UPLOAD_FOLDER, filename))
+        response_data['name'] = filename
+    else:
+        response_data['error'] = 'Invalid file type. Only PNG file is allowed'
+    return json.dumps(response_data)
+
 if __name__ == '__main__':
-    setUp(10)
-    app.run(debug=True, host='0.0.0.0')
+    setUp(7)
+    app.run(debug=True, host='0.0.0.0', use_reloader=False)
+#     file_sync.remove_watch()

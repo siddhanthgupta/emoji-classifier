@@ -7,6 +7,8 @@
 #                                sad_score: "Something",
 #                                angry_score: "Something",
 #                                confused_score: "Something",
+#                                fear_score: something,
+#                                disgust_score: 'something',
 #                                classification: "Something",
 #                                accuracy: "Something",
 #                            }
@@ -52,10 +54,10 @@ class EmojiDAO(object):
             with open(EmojiDAO.my_filename, "rb") as f:
                 file_dict = pickle.load(f)
             for key, value in data_dict.items():
-                if(key in data_dict):
+                if(key in file_dict):
                     print(
                         "Warning: overwriting key " + key + ":" + (str)(value))
-                    file_dict[key] = value
+                file_dict[key] = value
             with open(EmojiDAO.my_filename, "wb") as f:
                 pickle.dump(file_dict, f)
         else:
